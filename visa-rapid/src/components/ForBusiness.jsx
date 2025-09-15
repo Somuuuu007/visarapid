@@ -34,30 +34,66 @@ const ForBusiness = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side - Content */}
             <div ref={contentRef} className={`bg-blue-100 slide-in-left ${contentVisible ? 'visible' : ''}`}>
-            {/* Tag - stays in original position */}
-            <div className="inline-flex items-center bg-white px-16 py-7 shadow-sm mb-6">
-              <svg className="w-6 h-6 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-              <span className="text-gray-700 font-medium text-2xl">For Businesses</span>
-            </div>
-            
+
             {/* Content with padding */}
-            <div className="space-y-8 pr-12 lg:pr-16 pl-13 pb-16">
-              {/* Main heading */}
-              <h2 className="text-5xl lg:text-6xl font-light text-gray-900 leading-tight font-serif">
-                Scale Your Business<br />
-                With Global Talent
-              </h2>
-            
+            <div className="space-y-8 pr-12 lg:pr-18 pl-16 pb-16 pt-10">
+              {/* Warning Icon and Alert */}
+              <div className="flex items-start gap-3">
+                <h2 className="text-5xl lg:text-5xl font-light text-gray-900 leading-tight font-serif">
+                  The clock is ticking—move to a developed country before it's too late!
+                </h2>
+              </div>
+
               {/* Description */}
-              <p className="text-gray-700 text-2xl leading-relaxed">
-                Expand your team with international talent through Portugal's business-friendly visa programs. We streamline the process for work permits, investor visas, and corporate relocations to help your business thrive globally.
+              <ul className="space-y-1 text-gray-700 text-lg leading-relaxed">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>US, Canada, Australia, and the UK have closed most immigration pathways.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Study visas now demand a hefty investment.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Securing a work visa is tougher than ever amid the AI crisis.</span>
+                </li>
+              </ul>
+
+              {/* Main Message */}
+              <h3 className="text-3xl lg:text-4xl font-light text-gray-900 leading-tight font-serif">
+                When AI takes over jobs, immigration opportunities will disappear.
+              </h3>
+
+              {/* Solution */}
+              <h4 className="text-2xl lg:text-3xl font-medium text-gray-900 leading-tight">
+                Visa Rapid has the solution you need today:
+              </h4>
+
+              {/* Solution Points */}
+              <ul className="space-y-1 text-gray-700 text-lg leading-relaxed">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Start your journey with just a business idea and move to Europe permanently.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>The world's most predictable and affordable immigration pathway.</span>
+                </li>
+              </ul>
+
+              {/* Final Message */}
+              <p className="text-gray-900 text-lg font-medium leading-relaxed">
+                Don't wait until it's all over—we truly believe in acting now!
               </p>
-              
+
               {/* CTA Button */}
-              <button className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2" style={{backgroundColor: 'rgb(59, 130, 246)'}}>
-                Schedule Consultation
+              <button
+                onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
+                className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
+                style={{backgroundColor: 'rgb(59, 130, 246)'}}
+              >
+                SCHEDULE A MEETING
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -68,9 +104,9 @@ const ForBusiness = () => {
           {/* Right side - Image */}
           <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <img 
-              src="/image4.jpg" 
+              src="/image4.png" 
               alt="Business meeting"
-              className="w-full h-130 lg:h-[700px] object-cover shadow-lg"
+              className="w-full h-130 lg:h-[820px] object-cover shadow-lg"
             />
           </div>
         </div>

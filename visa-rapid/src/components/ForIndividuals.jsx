@@ -113,7 +113,7 @@ const ForIndividuals = () => {
             {/* Left side - Image */}
             <div ref={imageRef} className={`relative slide-in-left ${imageVisible ? 'visible' : ''}`}>
               <img 
-                src="/image3.jpg" 
+                src="/image3.png" 
                 alt="Family embracing"
                 className="w-full h-130 lg:h-[700px] object-cover shadow-lg"
               />
@@ -124,23 +124,54 @@ const ForIndividuals = () => {
             {/* Tag - stays in original position */}
             <div className="inline-flex items-center bg-white px-16 py-7 shadow-sm mb-6">
               <svg className="w-6 h-6 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              <span className="text-gray-700 font-medium text-2xl">Individuals & families</span>
+              <span className="text-gray-700 font-medium text-2xl">Europe :</span>
             </div>
             
             {/* Content with padding */}
             <div className="space-y-8 pl-12 lg:pl-16 pr-8 pb-16">
               {/* Main heading */}
               <h2 className="text-5xl lg:text-6xl font-light text-gray-900 leading-tight font-serif">
-              Your Future, One<br />
-              Clear Step at a Time
+              The Next Step For<br />
+              Your Career & Family
             </h2>
             
               {/* Description */}
-              <p className="text-gray-700 text-2xl leading-relaxed">
-                Navigate changing immigration requirements with confidence. Our proven process empowers both families and extraordinary individuals to build their future in the Portugal with experienced guidance and guaranteed success.
-              </p>
+              <ul className="space-y-3 text-gray-700 text-xl leading-relaxed">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>One of the cleanest and safest places to live and retire.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Give your family weekends holidays in Switzerland.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Breathe clean air, enjoy fresh food, and drink pure water.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Clear PR and citizenship pathway, unlike the uncertainty in the US or Canada.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Lower cost of living compared to most Western countries.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Free healthcare for the entire family.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Free, quality education for your children.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span>Financial security with unemployment benefits.</span>
+                </li>
+              </ul>
               
               {/* CTA Button */}
               <button 

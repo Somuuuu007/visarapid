@@ -1,123 +1,301 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const WhyChooseUs = () => {
-  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 })
-  const [cardsRef, cardsVisible] = useScrollAnimation({ threshold: 0.1 })
-  
-  const features = [
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-      ),
-      title: "Local Setup in Portugal",
-      description: "We have an operational office and registered entity in Portugal — which means faster in-country support, an address for applications, local bank introductions and easier bank/KYC processes"
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      ),
-      title: "Portuguese Team, Real Edge",
-      description: "Portuguese-speaking advisors handle SEF, consulate, and municipal formalities directly — fewer translation errors, faster document legalisation (apostilles) and smoother in-person steps."
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"/>
-        </svg>
-      ),
-      title: "Incubator & Startup Links",
-      description: "Direct relationships with certified incubators (IAPMEI partners) and local VCs — we facilitate StartUP acceptance, mentor introductions and investor warm-intros."
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
-      ),
-      title: "Lawyer-led team",
-      description: "Legal partners in Portugal, ensuring company setup, immigration compliance, tax structuring, and post-landing formalities are handled accurately and legally."
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 })
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+  const [errors, setErrors] = useState({})
+
+  const openModal = () => {
+    setIsModalOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    document.body.style.overflow = 'unset'
+    setErrors({})
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    })
+  }
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[+]?[\d\s\-()]{10,}$/
+    return phoneRegex.test(phone)
+  }
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }))
+
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }))
     }
-  ]
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const newErrors = {}
+
+    // Validate email
+    if (formData.email && !validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'
+    }
+
+    // Validate phone
+    if (formData.phone && !validatePhone(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number (at least 10 digits)'
+    }
+
+    // Validate required fields
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = 'Full name is required'
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email address is required'
+    }
+
+    setErrors(newErrors)
+
+    // If no errors, submit the form
+    if (Object.keys(newErrors).length === 0) {
+      // Handle form submission here
+      console.log('Form submitted:', formData)
+      closeModal()
+    }
+  }
 
   return (
     <>
       <style>
         {`
-          .fade-in-up {
+          .slide-in-left {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateX(-50px);
             transition: all 0.8s ease-out;
           }
-          .fade-in-up.visible {
+          .slide-in-left.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
           }
-          .stagger-cards {
+          .slide-in-right {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.7s ease-out;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
           }
-          .stagger-cards.visible {
+          .slide-in-right.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
           }
         `}
       </style>
-      <section id="why-choose-us" className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-8xl mx-auto">
           {/* Header */}
-          <div ref={titleRef} className={`text-center mb-10 sm:mb-12 lg:mb-16 fade-in-up ${titleVisible ? 'visible' : ''}`}>
-          <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
-            <div className="flex items-center">
-              <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
-              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-teal-400 rounded-full mx-2 sm:mx-3"></div>
-              <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+            <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
+              <div className="flex items-center">
+                <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
+                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-teal-400 rounded-full mx-2 sm:mx-3"></div>
+                <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
+              </div>
+            </div>
+            <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
+              WHY CHOOSE US?
+            </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-10 sm:mb-12 lg:mb-16">
+              Predictable Immigration - No Endless Waiting
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+            {/* Left side - Content */}
+            <div ref={contentRef} className={`slide-in-left ${contentVisible ? 'visible' : ''}`}>
+              <div className="space-y-8 pr-12 lg:pr-16 pl-8 pb-16">
+                {/* Main heading */}
+                <h2 className="text-4xl lg:text-5xl font-light text-gray-900 leading-tight font-serif">
+                  Don't wait, time is flying, start your application today!
+                </h2>
+
+                {/* Numbered list */}
+                <ol className="space-y-3 text-gray-700 text-xl leading-relaxed">
+                  <li className="flex items-start">
+                    <span className="text-black font-bold mr-4 mt-1">1.</span>
+                    <span>Minimum budget of ₹8 lakhs (payable in phases over 1 year).</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-black font-bold mr-4 mt-1">2.</span>
+                    <span>Proof of ₹10-15 lakhs as financial security.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-black font-bold mr-4 mt-1">3.</span>
+                    <span>Entrepreneurial mindset and willingness to start a business (prior experience not mandatory).</span>
+                  </li>
+                </ol>
+
+                {/* Final message */}
+                <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900 italic bg-yellow-200 inline-block font-serif mt-10">
+                  Looks good?
+                </p>
+
+                {/* CTA Button */}
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={openModal}
+                    className="text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors font-medium flex items-center gap-2"
+                    style={{backgroundColor: 'rgb(111, 54, 2)'}}
+                  >
+                    Contact Us Today
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+              <img
+                src="/WhyChooseUs.jpg"
+                alt="Visa Application with Passport"
+                className="w-180 h-80 lg:h-96 object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
-          <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
-            WHY CHOOSE US
-          </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">
-            Why Choose Visa Rapid<br />
-            for Your Immigration Journey?
-          </h2>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className={`bg-white p-4 sm:p-6 lg:p-6 text-center group hover:shadow-xl hover:-translate-y-2 hover:border-teal-300 transition-all duration-300 border border-gray-300 cursor-pointer rounded-lg stagger-cards ${cardsVisible ? 'visible' : ''}`}
-              style={{ transitionDelay: `${index * 0.2}s` }}
+        {/* Modal */}
+        {isModalOpen && (
+          <div
+            className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-50 p-4"
+            onClick={closeModal}
+          >
+            <div
+              className="bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto mx-4 sm:mx-0"
+              onClick={(e) => e.stopPropagation()}
             >
-              {/* Icon */}
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-teal-700 rounded-full mb-4 sm:mb-5 lg:mb-6">
-                <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  {feature.icon.props.children}
-                </svg>
+
+              {/* Header */}
+              <div className="bg-teal-500 text-white px-4 sm:px-6 py-4 rounded-t-lg relative">
+                <h2 className="text-lg sm:text-xl font-semibold text-center">Contact Us Today</h2>
+                <button
+                  onClick={closeModal}
+                  className="absolute top-3 right-3 text-white hover:text-gray-200 transition-colors bg-transparent border-none p-1"
+                >
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
-              
-              {/* Title */}
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
-                {feature.title}
-              </h3>
-              
-              {/* Description */}
-              <p className="text-gray-600 leading-relaxed text-sm sm:text-base font-medium">
-                {feature.description}
-              </p>
+
+              {/* Form */}
+              <div className="p-4 sm:p-6">
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  {/* Name and Email Row */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={formData.fullName}
+                        onChange={(e) => handleInputChange('fullName', e.target.value)}
+                        className={`w-full p-4 border rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white ${
+                          errors.fullName ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
+                        }`}
+                      />
+                      {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className={`w-full p-4 border rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white ${
+                          errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
+                        }`}
+                      />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <input
+                      type="tel"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className={`w-full p-4 border rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white ${
+                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
+                      }`}
+                    />
+                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                  </div>
+
+                  {/* Subject */}
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={(e) => handleInputChange('subject', e.target.value)}
+                    className="w-full p-4 border border-gray-300 rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white"
+                  />
+
+                  {/* Message */}
+                  <textarea
+                    placeholder="Write a Message"
+                    rows="4"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className="w-full p-4 border border-gray-300 rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white resize-none"
+                  ></textarea>
+
+                  {/* Terms */}
+                  <div className="flex items-start space-x-2">
+                    <input type="checkbox" className="mt-1 w-4 h-4 text-teal-500" />
+                    <p className="text-sm text-gray-600">
+                      By submitting this form, you agree to our{' '}
+                      <a href="#" className="text-blue-500 hover:text-blue-600">Terms of Use</a>
+                      {' '}and{' '}
+                      <a href="#" className="text-blue-500 hover:text-blue-600">Privacy Policy</a>
+                    </p>
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full bg-gray-900 hover:bg-black text-white font-semibold py-3 px-6 rounded transition-colors"
+                  >
+                    Send a Message
+                  </button>
+                </form>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        )}
+      </section>
     </>
   )
 }
