@@ -86,8 +86,8 @@ const ScheduleMeeting = () => {
             
             {/* Profile card overlay */}
             <div className="absolute top-4 sm:top-8 lg:top-20 right-2 sm:right-4 lg:right-6 p-3 sm:p-4 max-w-xs bg-white/90 backdrop-blur-sm rounded-lg shadow-lg">
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1">Lawyer ka naam.</h3>
-              <p className="text-gray-600 text-xs sm:text-sm">Lawyer & Partner</p>
+              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1">Somesh Lingwal</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Immigration Lawyer & Partner</p>
             </div>
           </div>
         </div>

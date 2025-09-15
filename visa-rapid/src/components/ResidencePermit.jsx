@@ -138,7 +138,6 @@ const ResidencePermit = () => {
                     className="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded border border-gray-200 shadow-sm"
                     style={{
                       imageRendering: 'crisp-edges',
-                      imageRendering: '-webkit-optimize-contrast',
                       msInterpolationMode: 'nearest-neighbor'
                     }}
                   />
@@ -184,7 +183,6 @@ const ResidencePermit = () => {
                     className="w-8 h-6 object-cover rounded border border-gray-200 shadow-sm"
                     style={{
                       imageRendering: 'crisp-edges',
-                      imageRendering: '-webkit-optimize-contrast',
                       msInterpolationMode: 'nearest-neighbor'
                     }}
                   />

@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 
 const useScrollAnimation = (options = {}) => {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef()
 
+  const observerOptions = useMemo(() => ({
+    threshold: options.threshold || 0.1,
+    rootMargin: options.rootMargin || '0px 0px -50px 0px',
+    ...options
+  }), [options])
+
   useEffect(() => {
+    const currentRef = ref.current
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -17,23 +24,19 @@ const useScrollAnimation = (options = {}) => {
           setIsVisible(false)
         }
       },
-      {
-        threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -50px 0px',
-        ...options
-      }
+      observerOptions
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
-  }, [options.threshold, options.rootMargin, options.once])
+  }, [observerOptions, options.once])
 
   return [ref, isVisible]
 }

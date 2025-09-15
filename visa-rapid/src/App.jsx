@@ -27,9 +27,9 @@ const HomePage = () => (
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen w-full bg-white">
+      <div className="min-h-screen w-full bg-white overflow-x-hidden">
         <Navbar />
-        <main className="w-full">
+        <main className="w-full overflow-x-hidden">
           <Routes>
             <Route path="/" element={
               <>
