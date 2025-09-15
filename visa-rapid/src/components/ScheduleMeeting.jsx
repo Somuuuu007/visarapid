@@ -42,8 +42,8 @@ const ScheduleMeeting = () => {
                 Let's discuss the details
               </h2>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Schedule a meeting with our lawyer-led team in Portugal. Our legal experts will review your case, guide you through complete setup, visa compliance, and tax onboarding, and help you find the best pathway tailored to your goals.
-              </p>
+                Schedule an online meeting with our legal team. They will review your case, estimate the costs, and recommend the best solution based on your goals.
+                </p>
             </div>
 
             <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
@@ -85,9 +85,8 @@ const ScheduleMeeting = () => {
             </div>
             
             {/* Profile card overlay */}
-            <div className="absolute top-4 sm:top-8 lg:top-20 right-2 sm:right-4 lg:right-6 p-3 sm:p-4 max-w-xs bg-white/90 backdrop-blur-sm rounded-lg shadow-lg">
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1">Somesh Lingwal</h3>
-              <p className="text-gray-600 text-xs sm:text-sm">Immigration Lawyer & Partner</p>
+            <div className="absolute top-4 sm:top-8 lg:top-30 right-2 sm:right-4 lg:right-6 p-3 sm:p-4 max-w-xs bg-white/90 backdrop-blur-sm rounded-lg shadow-lg">
+              <h3 className="font-bold text-base sm:text-lg text-gray-900 ">Talk to a Lawyer</h3>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import WhyChooseUs from './components/WhyChooseUs'
 import ScheduleMeeting from './components/ScheduleMeeting'
 import Footer from './components/Footer'
 import ContactPage from './components/ContactPage'
+import StatsSection from './components/StatsSection'
 
 // Home page component
 const HomePage = () => (
@@ -20,6 +21,7 @@ const HomePage = () => (
     <ResidencePermit />
     <StepByStep />
     <WhyChooseUs />
+    <StatsSection />
     <ScheduleMeeting />
   </>
 )
