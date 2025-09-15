@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const styles = `
   @keyframes fadeInUp {
@@ -15,10 +16,51 @@ const styles = `
   .animate-content {
     animation: fadeInUp 0.5s ease-out forwards;
   }
+  
+  .slide-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  .slide-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s ease-out;
+  }
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease-out;
+  }
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
 `
 
 const StepByStep = () => {
   const [selectedStep, setSelectedStep] = useState(0)
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [stepsRef, stepsVisible] = useScrollAnimation({ threshold: 0.1 })
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.1 })
 
   const handleNext = () => {
     if (selectedStep < steps.length - 1) {
@@ -109,7 +151,7 @@ const StepByStep = () => {
       <style dangerouslySetInnerHTML={{ __html: styles }} />
       <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
+        <div ref={titleRef} className={`mb-16 slide-in-up ${titleVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             We go through each stage with you
           </h2>
@@ -120,7 +162,7 @@ const StepByStep = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left side - Steps list */}
-          <div className="bg-white p-6 h-fit">
+          <div ref={stepsRef} className={`bg-white p-6 h-fit slide-in-left ${stepsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             {steps.map((step, index) => (
               <div key={index}>
                 <div
@@ -160,7 +202,7 @@ const StepByStep = () => {
           </div>
 
           {/* Right side - Selected step details */}
-          <div className="bg-white p-8 h-fit" key={selectedStep}>
+          <div ref={contentRef} className={`bg-white p-8 h-fit slide-in-right ${contentVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }} key={selectedStep}>
             <div className="animate-content">
               <div className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
                 {steps[selectedStep].duration}

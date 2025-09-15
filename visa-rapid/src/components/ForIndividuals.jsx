@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ForIndividuals = () => {
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 })
+  
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [formData, setFormData] = useState({
     fullName: '',
@@ -80,20 +84,43 @@ const ForIndividuals = () => {
     }
   }
   return (
-    <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-8xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-          {/* Left side - Image */}
-          <div className="relative">
-            <img 
-              src="/image3.jpg" 
-              alt="Family embracing"
-              className="w-full h-130 lg:h-[700px] object-cover shadow-lg"
-            />
-          </div>
-          
-          {/* Right side - Content */}
-          <div className="bg-orange-200 ">
+    <>
+      <style>
+        {`
+          .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        `}
+      </style>
+      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+            {/* Left side - Image */}
+            <div ref={imageRef} className={`relative slide-in-left ${imageVisible ? 'visible' : ''}`}>
+              <img 
+                src="/image3.jpg" 
+                alt="Family embracing"
+                className="w-full h-130 lg:h-[700px] object-cover shadow-lg"
+              />
+            </div>
+            
+            {/* Right side - Content */}
+            <div ref={contentRef} className={`bg-orange-200 slide-in-right ${contentVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             {/* Tag - stays in original position */}
             <div className="inline-flex items-center bg-white px-16 py-7 shadow-sm mb-6">
               <svg className="w-6 h-6 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -242,6 +269,7 @@ const ForIndividuals = () => {
         </div>
       )}
     </section>
+    </>
   )
 }
 
