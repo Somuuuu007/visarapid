@@ -1,6 +1,10 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ResidencePermit = () => {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [tableRef, tableVisible] = useScrollAnimation({ threshold: 0.1 })
+  
   const countries = [
     {
       flag: 'https://flagcdn.com/w80/pt.png',
@@ -79,11 +83,34 @@ const ResidencePermit = () => {
   ]
 
   return (
-    <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center lg:text-left">
-          Residence permit by investment
-        </h2>
+    <>
+      <style>
+        {`
+          .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+          }
+          .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          .stagger-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+          }
+          .stagger-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        `}
+      </style>
+      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 ref={titleRef} className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center lg:text-left fade-in-up ${titleVisible ? 'visible' : ''}`}>
+            Residence permit by investment
+          </h2>
         
         {/* Table Header */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-4 xl:gap-20 py-4 text-sm font-semibold text-gray-600 uppercase tracking-wide border-b border-gray-200" style={{gridTemplateColumns: '1.8fr 1fr 1.2fr 2fr'}}>
@@ -94,9 +121,13 @@ const ResidencePermit = () => {
         </div>
         
         {/* Country Rows */}
-        <div className="bg-white">
+        <div ref={tableRef} className="bg-white">
           {countries.map((country, index) => (
-            <div key={index} className={`py-4 sm:py-6 lg:py-8 ${index !== countries.length - 1 ? 'border-b border-gray-200' : ''}`}>
+            <div 
+              key={index} 
+              className={`py-4 sm:py-6 lg:py-8 stagger-animation ${tableVisible ? 'visible' : ''} ${index !== countries.length - 1 ? 'border-b border-gray-200' : ''}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
               {/* Mobile Card Layout */}
               <div className="lg:hidden bg-gray-50 rounded-lg p-4 space-y-4">
                 {/* Country Info */}
@@ -190,6 +221,7 @@ const ResidencePermit = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

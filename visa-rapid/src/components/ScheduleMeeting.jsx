@@ -1,12 +1,39 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ScheduleMeeting = () => {
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 })
+  
   return (
-    <section className="pt-8 sm:pt-12 lg:pt-20 pb-10 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto bg-gray-50 px-4 sm:px-6 lg:px-10 rounded-lg">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          {/* Left side - Content */}
-          <div className="text-center lg:text-left">
+    <>
+      <style>
+        {`
+          .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        `}
+      </style>
+      <section className="pt-8 sm:pt-12 lg:pt-20 pb-10 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto bg-gray-50 px-4 sm:px-6 lg:px-10 rounded-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+            {/* Left side - Content */}
+            <div ref={contentRef} className={`text-center lg:text-left slide-in-left ${contentVisible ? 'visible' : ''}`}>
             <div>
               <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 sm:mb-4 pt-6">
                 Schedule a meeting
@@ -47,7 +74,7 @@ const ScheduleMeeting = () => {
           </div>
 
           {/* Right side - Image and Profile */}
-          <div className="relative overflow-visible mt-8 lg:mt-0 order-first lg:order-last">
+          <div ref={imageRef} className={`relative overflow-visible mt-8 lg:mt-0 order-first lg:order-last slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             {/* Lawyer image - full height without container styling */}
             <div className="h-[300px] sm:h-[350px] lg:h-[450px] flex items-end justify-center lg:justify-start overflow-visible">
               <img 
@@ -66,6 +93,7 @@ const ScheduleMeeting = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

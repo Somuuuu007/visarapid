@@ -1,12 +1,39 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ForBusiness = () => {
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 })
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 })
+  
   return (
-    <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-8xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-          {/* Left side - Content */}
-          <div className="bg-blue-100">
+    <>
+      <style>
+        {`
+          .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+          }
+          .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        `}
+      </style>
+      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+            {/* Left side - Content */}
+            <div ref={contentRef} className={`bg-blue-100 slide-in-left ${contentVisible ? 'visible' : ''}`}>
             {/* Tag - stays in original position */}
             <div className="inline-flex items-center bg-white px-16 py-7 shadow-sm mb-6">
               <svg className="w-6 h-6 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +66,7 @@ const ForBusiness = () => {
           </div>
           
           {/* Right side - Image */}
-          <div className="relative">
+          <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <img 
               src="/image4.jpg" 
               alt="Business meeting"
@@ -49,6 +76,7 @@ const ForBusiness = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 
