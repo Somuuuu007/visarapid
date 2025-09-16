@@ -11,6 +11,7 @@ import ScheduleMeeting from './components/ScheduleMeeting'
 import Footer from './components/Footer'
 import ContactPage from './components/ContactPage'
 import StatsSection from './components/StatsSection'
+import EntrepreneurVisa from './pages/EntrepreneurVisa'
 
 // Home page component
 const HomePage = () => (
@@ -40,6 +41,12 @@ const App = () => {
               </>
             } />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/entrepreneur-visa" element={
+              <>
+                <EntrepreneurVisa />
+                <Footer />
+              </>
+            } />
           </Routes>
         </main>
       </div>
