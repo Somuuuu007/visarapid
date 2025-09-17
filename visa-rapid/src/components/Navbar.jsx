@@ -38,7 +38,7 @@ const Navbar = () => {
                 </svg>
                 <span>Residency</span>
               </a>
-              <a href="#" className="!text-black px-3 py-2 text-sm font-medium transition-colors hover:!text-gray-600 flex items-center gap-2">
+              <a href="/job-seeker-visa" className="!text-black px-3 py-2 text-sm font-medium transition-colors hover:!text-gray-600 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V4a2 2 0 00-2-2H8a2 2 0 00-2 2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6m8 0h2a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h2" />
                 </svg>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 </svg>
                 Residency
               </a>
-              <a href="#" className="!text-black  px-3 py-2 text-base font-medium hover:bg-gray-50 flex items-center gap-2">
+              <a href="/job-seeker-visa" className="!text-black  px-3 py-2 text-base font-medium hover:bg-gray-50 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V4a2 2 0 00-2-2H8a2 2 0 00-2 2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6m8 0h2a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h2" />
                 </svg>
