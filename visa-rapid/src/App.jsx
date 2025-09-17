@@ -14,6 +14,7 @@ import StatsSection from './components/StatsSection'
 import EntrepreneurVisa from './pages/EntrepreneurVisa'
 import StartupVisa from './pages/StartupVisa'
 import JobSeekerVisa from './pages/JobSeekerVisa'
+import Residency from './pages/Residency'
 
 // Home page component
 const HomePage = () => (
@@ -58,6 +59,12 @@ const App = () => {
             <Route path="/job-seeker-visa" element={
               <>
                 <JobSeekerVisa />
+                <Footer />
+              </>
+            } />
+            <Route path="/residency" element={
+              <>
+                <Residency />
                 <Footer />
               </>
             } />

@@ -155,9 +155,9 @@ const StartupVisa = () => {
           >
             {/* Left Column - Content */}
             <div className="order-1 lg:order-1">
-              <div className="space-y-6">
+              <div className="space-y-1">
                 <div>
-                  <p className="text-6xl font-semibold text-gray-900 tracking-wide mb-16 ">
+                  <p className="text-6xl font-semibold text-gray-900 tracking-wide mb-8 ">
                     What is the Portugal Startup Visa?
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mb-10">
@@ -171,7 +171,7 @@ const StartupVisa = () => {
 
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     className="px-8 py-3 rounded-lg font-medium transition-colors"
                     style={{ backgroundColor: '#ef4444', color: 'white' }}
@@ -204,7 +204,7 @@ const StartupVisa = () => {
                 <img
                   src="/Startup.png"
                   alt="Portugal D2 Visa Documentation"
-                  className="w-full h-160 object-cover rounded-2xl"
+                  className="w-full h-130 object-cover rounded-2xl"
                 />
               </div>
             </div>
@@ -229,7 +229,7 @@ const StartupVisa = () => {
             {/* Benefits Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               {/* Support from Incubators Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,7 +255,7 @@ const StartupVisa = () => {
              
 
               {/* Pathway to Citizenship Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
+              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ const StartupVisa = () => {
               </div>
 
               {/* Affordable Residency Option Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
+              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -289,7 +289,7 @@ const StartupVisa = () => {
               </div>
               
                {/* Tax Benefits Card */}
-               <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+               <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -321,7 +321,7 @@ const StartupVisa = () => {
             <div className={`fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
               <h2 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-gray-900 leading-tighter">
                 Who can <br/>
-                <span className="bg-red-300 text-gray-900 px-1 rounded transition-all duration-300 hover:bg-red-400 inline-block">Apply?</span>
+                <span className="bg-yellow-300 text-gray-900 px-1 rounded transition-all duration-300 hover:bg-yellow-400 inline-block">Apply?</span>
               </h2>
             </div>
 
@@ -329,7 +329,7 @@ const StartupVisa = () => {
             <div className={`fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <div className="space-y-10">
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-red-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       1
                     </div>
                   <p className="text-lg text-gray-700">
@@ -338,7 +338,7 @@ const StartupVisa = () => {
                 </div>
 
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-red-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       2
                     </div>
                   <p className="text-lg text-gray-700">
@@ -347,7 +347,7 @@ const StartupVisa = () => {
                 </div>
 
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.5s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-red-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       3
                     </div>
                   <p className="text-lg text-gray-700">
@@ -379,7 +379,7 @@ const StartupVisa = () => {
           <div className={`relative flex items-center justify-center min-h-[750px] fade-in-up ${stepByStepVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
 
             {/* Central Circle */}
-            <div className="absolute z-10 w-52 h-52 bg-red-400 rounded-full flex flex-col items-center justify-center text-center shadow-2xl border-4 border-white">
+            <div className="absolute z-10 w-52 h-52 bg-yellow-300 rounded-full flex flex-col items-center justify-center text-center shadow-2xl border-4 border-white">
               <h3 className="text-lg font-bold text-white mb-3 leading-tight">
                 Portugal<br/>Startup Visa<br/>Process
               </h3>
@@ -409,7 +409,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 0 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 0 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   1
                 </div>
@@ -426,7 +426,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 1 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 1 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   2
                 </div>
@@ -443,7 +443,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 2 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 2 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   3
                 </div>
@@ -460,7 +460,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 3 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 3 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   4
                 </div>
@@ -477,7 +477,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 4 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 4 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   5
                 </div>
@@ -494,7 +494,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 5 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 5 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   6
                 </div>
@@ -511,7 +511,7 @@ const StartupVisa = () => {
             } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 6 ? 'bg-red-500 text-white' : 'bg-red-400 text-white'
+                  currentStep === 6 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
                 }`}>
                   7
                 </div>

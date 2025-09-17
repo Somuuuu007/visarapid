@@ -160,7 +160,7 @@ const EntrepreneurVisa = () => {
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-600 leading-tight mb-4">
                     Secure EU residency with Portugal's visa for entrepreneurs
                   </h1>
-                  <p className="text-2xl font-bold text-gray-900  tracking-wide mb-6 mt-6">
+                  <p className="text-3xl font-bold text-gray-900  tracking-wide mb-6 mt-6">
                     What is the Portugal Entrepreneur(D2) Visa?
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mb-6">
@@ -355,7 +355,7 @@ const EntrepreneurVisa = () => {
             className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-start fade-in-up ${detailsVisible ? 'visible' : ''}`}
           >
             {/* Left Column - Eligibility Requirements (70%) */}
-            <div className={`lg:col-span-7 bg-red-100 p-8 rounded-3xl hover-lift fade-in-left ${detailsVisible ? 'visible' : ''}`}>
+            <div className={`lg:col-span-7 bg-red-100 p-8 rounded-3xl fade-in-left ${detailsVisible ? 'visible' : ''}`}>
               <div className="mb-6">
                 <p className="text-gray-900 mb-6 text-center text-2xl font-semibold">
                   To qualify for Portugal's D2 Visa, applicants must:
@@ -421,7 +421,7 @@ const EntrepreneurVisa = () => {
               <img
                 src="/Visa1.png"
                 alt="Portugal historic building"
-                className="w-full h-95 rounded-3xl shadow-lg hover-lift transition-transform duration-500"
+                className="w-full h-95 rounded-3xl shadow-lg transition-transform duration-500"
               />
             </div>
           </div>
@@ -438,7 +438,7 @@ const EntrepreneurVisa = () => {
             {/* Left Column - Process Steps */}
             <div className={`fade-in-left ${processVisible ? 'visible' : ''}`}>
               <div className="mb-8">
-                <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-relaxed">
+                <h2 className="text-3xl sm:text-4xl font-light font-serif text-gray-900 leading-tight">
                   What is the application process for Portugal's D2 Visa in 2025?
                 </h2>
               </div>

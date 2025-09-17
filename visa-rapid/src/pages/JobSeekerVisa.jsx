@@ -243,7 +243,7 @@ const JobSeekerVisa = () => {
             {/* Benefits Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               {/* No Job Offer Required Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+              <div className={`bg-blue-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,7 +261,7 @@ const JobSeekerVisa = () => {
               </div>
 
               {/* 6-9 Months Stay Permit Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+              <div className={`bg-blue-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -279,7 +279,7 @@ const JobSeekerVisa = () => {
               </div>
 
               {/* Pathway to residency & citizenship Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
+              <div className={`bg-blue-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,7 +297,7 @@ const JobSeekerVisa = () => {
               </div>
 
               {/* Family reunification Card */}
-              <div className={`bg-red-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
+              <div className={`bg-blue-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
                 <div className="mb-6">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
