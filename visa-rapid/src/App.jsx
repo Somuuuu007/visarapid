@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import ContactPage from './components/ContactPage'
 import StatsSection from './components/StatsSection'
 import EntrepreneurVisa from './pages/EntrepreneurVisa'
+import StartupVisa from './pages/StartupVisa'
 
 // Home page component
 const HomePage = () => (
@@ -44,6 +45,12 @@ const App = () => {
             <Route path="/entrepreneur-visa" element={
               <>
                 <EntrepreneurVisa />
+                <Footer />
+              </>
+            } />
+            <Route path="/startup-visa" element={
+              <>
+                <StartupVisa />
                 <Footer />
               </>
             } />
