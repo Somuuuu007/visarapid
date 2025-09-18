@@ -21,7 +21,7 @@ const HeroSection = () => {
               <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-6xl font-light text-gray-900 leading-tight font-serif block">         
 Are you a working professional and want to 
               </span>
-              <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900 italic bg-yellow-200 inline-block font-serif mt-2">
+              <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900 italic inline-block font-serif mt-2" style={{backgroundColor: '#fde68a'}}>
                 Move to Europe 
               </p>
               <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-6xl font-light text-gray-900 leading-tight font-serif block">         
@@ -42,7 +42,7 @@ Are you a working professional and want to
                 <button 
                   onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
                   className="btn-primary text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 font-medium text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer" 
-                  style={{borderRadius: '50px', backgroundColor: 'rgb(111, 54, 2)'}}
+                  style={{borderRadius: '8px', backgroundColor: 'rgb(111, 54, 2)'}}
                 >
                     BOOK A CALL WITH US!
                 </button>
@@ -51,26 +51,25 @@ Are you a working professional and want to
           </div>
           
           {/* Right side - Images */}
-          <div className="relative mt-8 lg:mt-0 order-first lg:order-last hidden lg:block">
-            
-            <div className="grid grid-cols-1 gap-4 relative z-10">
-              {/* First image - larger - animates first */}
-              <div ref={image1Ref} className={`relative fade-in-right animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
-                <img 
-                  src="/image1.png" 
-                  alt="Family immigration consultation"
-                  className="w-149 h-50 sm:h-60 md:h-72 lg:h-80 xl:h-80 object-cover rounded-lg shadow-lg mb-8 sm:mb-16 lg:mb-40"
-                />
-              </div>
+          <div className="relative mt-8 lg:mt-0 order-first lg:order-last hidden lg:block h-96 lg:h-[500px] xl:h-[600px]">
+            <div className="relative flex justify-center items-center h-full w-full">
+              {/* First image - positioned on the left and slightly up */}
+                <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-right animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
+                  <img 
+                    src="/image6.png" 
+                    alt="Family immigration consultation"
+                    className="w-80 h-60 lg:w-70 lg:h-120 xl:w-[300px] xl:h-130 object-cover shadow-xl border-b-8 border-orange-300"
+                  />
+                </div>
               
-              {/* Second image - smaller, positioned to the right - animates later */}
-              <div ref={image2Ref} className={`relative lg:absolute lg:-bottom-8 lg:right-0 lg:w-64 fade-in-right animation-delay-500 ${image2Visible ? 'visible' : ''}`}>
-                <img 
-                  src="/image2.png" 
-                  alt="Business immigration meeting"
-                  className="w-full h-40 sm:h-44 md:h-48 lg:h-48 object-cover rounded-lg shadow-lg mb-10"
-                />
-              </div>
+              {/* Second image - positioned on the right and slightly down */}
+                <div ref={image2Ref} className={`absolute right-0 top-24 lg:top-32 xl:top-30 fade-in-right animation-delay-500 ${image2Visible ? 'visible' : ''}`}>
+                  <img 
+                    src="/Job.png" 
+                    alt="Business immigration meeting"
+                    className="w-72 h-52 lg:w-70 lg:h-95 xl:w-96 xl:h-120 object-cover shadow-xl border-t-8 border-blue-400"
+                  />
+                </div>
             </div>
           </div>
         </div>

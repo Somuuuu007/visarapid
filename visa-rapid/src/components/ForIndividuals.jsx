@@ -107,68 +107,68 @@ const ForIndividuals = () => {
           }
         `}
       </style>
-      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
+      <section className="pt-6 sm:pt-8 lg:pt-10 pb-4 sm:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-8xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side - Image */}
             <div ref={imageRef} className={`relative slide-in-left ${imageVisible ? 'visible' : ''}`}>
-              <img 
-                src="/image3.png" 
+              <img
+                src="/image3.png"
                 alt="Family embracing"
-                className="w-full h-130 lg:h-[700px] object-cover shadow-lg"
+                className="w-full h-96 lg:h-[500px] object-cover shadow-lg"
               />
             </div>
             
             {/* Right side - Content */}
             <div ref={contentRef} className={`bg-orange-200 slide-in-right ${contentVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             {/* Tag - stays in original position */}
-            <div className="inline-flex items-center bg-white px-16 py-7 shadow-sm mb-6">
-              <svg className="w-6 h-6 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            <div className="inline-flex items-center bg-white px-12 py-4 shadow-sm mb-4">
+              <svg className="w-5 h-5 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9" />
               </svg>
-              <span className="text-gray-700 font-medium text-2xl">Europe :</span>
+              <span className="text-gray-700 font-medium text-xl">Europe :</span>
             </div>
             
             {/* Content with padding */}
-            <div className="space-y-8 pl-12 lg:pl-16 pr-8 pb-16">
+            <div className="space-y-6 pl-8 lg:pl-12 pr-6 pb-8">
               {/* Main heading */}
-              <h2 className="text-5xl lg:text-6xl font-light text-gray-900 leading-tight font-serif">
+              <h2 className="text-3xl lg:text-4xl font-light text-gray-900 leading-tight font-serif">
               The Next Step For<br />
               Your Career & Family
             </h2>
             
               {/* Description */}
-              <ul className="space-y-3 text-gray-700 text-xl leading-relaxed">
+              <ul className="space-y-2 text-gray-700 text-lg leading-relaxed">
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>One of the cleanest and safest places to live and retire.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Give your family weekends holidays in Switzerland.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Breathe clean air, enjoy fresh food, and drink pure water.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Clear PR and citizenship pathway, unlike the uncertainty in the US or Canada.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Lower cost of living compared to most Western countries.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Free healthcare for the entire family.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Free, quality education for your children.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                   <span>Financial security with unemployment benefits.</span>
                 </li>
               </ul>
@@ -180,9 +180,6 @@ const ForIndividuals = () => {
                 style={{backgroundColor: 'rgb(111, 54, 2)'}}
               >
                 Book An Appointment
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </button>
             </div>
           </div>
