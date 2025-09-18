@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ForIndividuals from './components/ForIndividuals'
 import ForBusiness from './components/ForBusiness'
-import ResidencePermit from './components/ResidencePermit'
 import StepByStep from './components/StepByStep'
 import WhyChooseUs from './components/WhyChooseUs'
 import ScheduleMeeting from './components/ScheduleMeeting'
@@ -22,7 +21,6 @@ const HomePage = () => (
     <HeroSection />
     <ForIndividuals />
     <ForBusiness />
-    <ResidencePermit />
     <StepByStep />
     <WhyChooseUs />
     <StatsSection />
