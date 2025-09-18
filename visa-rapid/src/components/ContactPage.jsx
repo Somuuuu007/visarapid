@@ -111,7 +111,7 @@ const ContactPage = () => {
         
 
         {/* Meeting Section */}
-        <div className="bg-gray-300 rounded-3xl px-7 flex flex-col lg:flex-row items-center justify-between">
+        <div className="bg-blue-200 rounded-3xl px-7 flex flex-col lg:flex-row items-center justify-between">
           
           {/* Left Content */}
           <div className="lg:w-2/3 mb-8 lg:mb-0">
