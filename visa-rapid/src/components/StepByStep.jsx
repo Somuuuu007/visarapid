@@ -1,22 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const styles = `
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-content {
-    animation: fadeInUp 0.5s ease-out forwards;
-  }
-  
   .slide-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -26,223 +11,99 @@ const styles = `
     opacity: 1;
     transform: translateY(0);
   }
-  
-  .slide-in-left {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: all 0.8s ease-out;
-  }
-  .slide-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .slide-in-right {
-    opacity: 0;
-    transform: translateX(40px);
-    transition: all 0.8s ease-out;
-  }
-  .slide-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .fade-in {
-    opacity: 0;
-    transition: all 0.6s ease-out;
-  }
-  .fade-in.visible {
-    opacity: 1;
-  }
 `
 
 const StepByStep = () => {
-  const [selectedStep, setSelectedStep] = useState(0)
   const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 })
-  const [stepsRef, stepsVisible] = useScrollAnimation({ threshold: 0.1 })
-  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.1 })
+  const [cardsRef, cardsVisible] = useScrollAnimation({ threshold: 0.1 })
 
-  const handleNext = () => {
-    if (selectedStep < steps.length - 1) {
-      setSelectedStep(selectedStep + 1)
-    } else {
-      // Scroll to Why Choose Us section
-      const whyChooseUsSection = document.getElementById('why-choose-us')
-      if (whyChooseUsSection) {
-        whyChooseUsSection.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest'
-        })
-      }
-    }
-  }
-
-  const steps = [
+  const services = [
     {
-      number: 1,
-      title: "Eligibility & Case Review",
-      duration: "1-2 weeks",
-      content: {
-        title: "Eligibility & Case Review",
-        description: "Lawyer-led consultation to identify the best visa type (D7, D2, Golden, Work, Family).",
-        bulletPoints: [
-          "Preliminary due diligence & personal document checklist."
-        ]
-        },
-    },
-    {
-      number: 2,
+      icon: (
+        <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+      ),
       title: "Document Preparation",
-      duration: "2-4 weeks",
-      content: {
-        title: "Document Preparation",
-        description: "NIF (tax ID) & NISS (social security number) setup.",
-        bulletPoints: [
-          "Bank account opening support.",
-          "Document drafting, notarisation, translations & apostille."
-        ]
-      }
+      description: "Our specialist team helps compile and verify your visa documents for complete accuracy, sidestepping potential delays and maximising your tax position within the relevant visa exemption."
     },
     {
-      number: 3,
+      icon: (
+        <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+        </div>
+      ),
       title: "Application Submission",
-      duration: "1-2 weeks",
-      content: {
-        title: "Application Submission",
-        description: "Filing with SEF (Portuguese Immigration) or Embassy.",
-        bulletPoints: [
-          "Appointment scheduling & biometrics assistance.",
-          "Full legal representation to avoid errors & delays."
-        ]
-      }
+      description: "We manage your visa application process, from form preparation to submission, eliminating errors and enhancing success rates. We also plan for the future, with most of our clients paying no more than 3.8% tax over 20 years with our proprietary financial modelling in conjunction with the 10 year Non Habitual Residency (NHR) tax regime."
     },
     {
-      number: 4,
-      title: "Approval & Residence Permit",
-      duration: "3-6 months",
-      content: {
-        title: "Approval & Residence Permit",
-        description: "Residence card issued (2 years, renewable).",
-        bulletPoints: [
-          "Family reunification included.",
-          "Guidance on rights (work, study, business setup)."
-        ]
-      }
+      icon: (
+        <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+          </svg>
+        </div>
+      ),
+      title: "Continuous Support",
+      description: "Our team offers all year-round assistance guiding you through each visa application stage, keeping you informed of new opportunities with your investments, financial planning, tax savings and visa benefits. It is vital that we plan for 10-20 years to maximise your life and financial status in Portugal."
     },
     {
-      number: 5,
-      title: "Post-Landing & Long-Term Support",
-      duration: "Ongoing",
-      content: {
-        title: "Post-Landing & Long-Term Support",
-        description: "Airport pickup & housing support (optional).",
-        bulletPoints: [
-          "NHR tax regime onboarding & accountant referrals.",
-          "Renewals, appeals & future PR/Citizenship (after 5 years).",
-          "Support with A2 Portuguese language test for citizenship."
-        ]
-      }
+      icon: (
+        <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+      ),
+      title: "Customised Solutions",
+      description: "Understanding the uniqueness of each visa application, we offer bespoke solutions and NHR/NHR 2.0 tax regimes support to optimise your financial and tax planning, ensuring adherence to criteria and regulations."
     }
   ]
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: styles }} />
-      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div ref={titleRef} className={`mb-16 slide-in-up ${titleVisible ? 'visible' : ''}`}>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            We go through each stage with you
-          </h2>
-          <p className="text-lg text-gray-700 max-w-2xl">
-            Portugal Visa Process - Step by Step
-          </p>
-        </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div ref={titleRef} className={`mb-12 slide-in-up ${titleVisible ? 'visible' : ''}`}>
+            <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+              How we can help?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              Discover the advantages of entrusting your visa journey to our experienced team.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left side - Steps list */}
-          <div ref={stepsRef} className={`bg-white p-6 h-fit slide-in-left ${stepsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-            {steps.map((step, index) => (
-              <div key={index}>
-                <div
-                  className={`flex items-center py-1 cursor-pointer transition-all duration-200 ${
-                    selectedStep === index ? 'opacity-100' : 'opacity-70 hover:opacity-100'
-                  }`}
-                  onClick={() => setSelectedStep(index)}
-                >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-bold mr-5 ${
-                    selectedStep === index 
-                      ? 'bg-blue-600 text-white shadow-md' 
-                      : 'bg-gray-100 text-gray-600'
-                  }`}>
-                    {step.number}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className={`font-semibold text-lg ${
-                      selectedStep === index ? 'text-blue-600' : 'text-gray-900'
-                    }`}>{step.title}</h3>
-                  </div>
-                  <svg 
-                    className={`w-5 h-5 transition-transform ${
-                      selectedStep === index ? 'rotate-90 text-blue-600' : 'text-gray-400'
-                    }`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+          <div ref={cardsRef} className={`grid grid-cols-1 lg:grid-cols-2 gap-6 slide-in-up ${cardsVisible ? 'visible' : ''}`}>
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: `${index * 0.1}s` }}
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  {service.icon}
                 </div>
-                {index < steps.length - 1 && (
-                  <hr className="border-gray-200 my-3" />
-                )}
+
+                {/* Title */}
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
-
-          {/* Right side - Selected step details */}
-          <div ref={contentRef} className={`bg-white p-8 h-fit slide-in-right ${contentVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }} key={selectedStep}>
-            <div className="animate-content">
-              <div className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
-                {steps[selectedStep].duration}
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {steps[selectedStep].content.title}
-              </h3>
-            
-              <div className="space-y-5">
-                <p className="text-gray-600 text-base leading-relaxed">
-                  {steps[selectedStep].content.description}
-                </p>
-                
-                {steps[selectedStep].content.bulletPoints && (
-                  <div className="space-y-3">
-                    {steps[selectedStep].content.bulletPoints.map((point, index) => (
-                      <p key={index} className="text-gray-600 text-base leading-relaxed">
-                        {point}
-                      </p>
-                    ))}
-                  </div>
-                )}
-                
-                <div className="mt-8">
-                  <button 
-                    onClick={handleNext}
-                    className="w-full py-4 px-6 font-semibold text-base transition-colors duration-200 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white"
-                  >
-                    {selectedStep === steps.length - 1 ? 'Why Choose Us' : 'Next'}
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }

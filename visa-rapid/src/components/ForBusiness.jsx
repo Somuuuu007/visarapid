@@ -81,7 +81,7 @@ const ForBusiness = () => {
             <img
               src="/image4.png"
               alt="Business meeting"
-              className="w-full h-96 lg:h-[540px] object-cover shadow-lg"
+              className="w-full h-96 lg:h-[550px] object-cover shadow-lg"
             />
           </div>
         </div>

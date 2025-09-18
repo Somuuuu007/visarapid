@@ -109,21 +109,13 @@ const WhyChooseUs = () => {
           }
         `}
       </style>
-      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="pt-1 sm:pt-1 lg:pt-1 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-8xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
             <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
-              <div className="flex items-center">
-                <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
-                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-teal-400 rounded-full mx-2 sm:mx-3"></div>
-                <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-teal-400"></div>
-              </div>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
-              WHY CHOOSE US?
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-10 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-10 sm:mb-12 lg:mb-10">
               Predictable Immigration - No Endless Waiting
             </h2>
           </div>
@@ -154,12 +146,12 @@ const WhyChooseUs = () => {
                 </ol>
 
                 {/* Final message */}
-                <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900 italic bg-yellow-200 inline-block font-serif mt-10">
+                <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900 italic bg-yellow-200 inline-block font-serif">
                   Looks good?
                 </p>
 
                 {/* CTA Button */}
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center ">
                   <button
                     onClick={openModal}
                     className="text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors font-medium flex items-center gap-2"
@@ -175,11 +167,11 @@ const WhyChooseUs = () => {
             </div>
 
             {/* Right side - Image */}
-            <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+            <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s', marginBottom: '60px' }}>
               <img
-                src="/WhyChooseUs.jpg"
+                src="/image7.png"
                 alt="Visa Application with Passport"
-                className="w-180 h-80 lg:h-96 object-cover rounded-lg shadow-lg"
+                className="w-180 h-100 lg:h-120 object-cover shadow-lg"
               />
             </div>
           </div>
