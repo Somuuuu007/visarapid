@@ -6,11 +6,7 @@ const Residency = () => {
   const [benefitsRef, benefitsVisible] = useScrollAnimation({ threshold: 0.1 })
   const [eligibilityRef, eligibilityVisible] = useScrollAnimation({ threshold: 0.1 })
   const [whoCanApplyRef, whoCanApplyVisible] = useScrollAnimation({ threshold: 0.1 })
-  const [stepByStepRef, stepByStepVisible] = useScrollAnimation({ threshold: 0.1 })
-  const [contactRef, contactVisible] = useScrollAnimation({ threshold: 0.1 })
   const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 })
-  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 })
-  const [currentStep, setCurrentStep] = useState(0)
 
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -94,40 +90,6 @@ const Residency = () => {
     }
   }
 
-  const steps = [
-    {
-      title: "Check Eligibility Requirements",
-      description: "Verify you meet the minimum requirements for Portuguese residency including financial stability, clean criminal record, and health insurance."
-    },
-    {
-      title: "Gather Required Documents",
-      description: "Collect all necessary documents including passport, birth certificate, criminal background check, financial statements, and health insurance proof."
-    },
-    {
-      title: "Submit Initial Application",
-      description: "File your residency application at the Portuguese embassy or consulate in your home country or at SEF (AIMA) if already in Portugal."
-    },
-    {
-      title: "Attend Biometric Appointment",
-      description: "Schedule and attend your biometric data collection appointment at the designated immigration office."
-    },
-    {
-      title: "Wait for Processing",
-      description: "Allow 3-6 months for application processing while maintaining legal status if already in Portugal."
-    },
-    {
-      title: "Receive Decision",
-      description: "Receive notification of your application decision. If approved, you'll be issued a residence permit card."
-    },
-    {
-      title: "Collect Residence Card",
-      description: "Pick up your physical residence permit card which serves as proof of your legal residency status in Portugal."
-    }
-  ]
-
-  const nextStep = () => {
-    setCurrentStep((prev) => (prev + 1) % steps.length)
-  }
 
   return (
     <>
@@ -191,7 +153,7 @@ const Residency = () => {
                   Maximise your wealth, visa,  tax status, 
                   property & investments in Portugal
                   </h1>
-                  <p className="text-3xl font-bold text-gray-900 tracking-wide mb-6 mt-6">
+                  <p className="text-4xl font-semibold text-gray-900 tracking-wide mb-6 mt-6">
                     What is the D7 Visa?
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mb-6">    
@@ -208,31 +170,7 @@ After one year, they can apply for permanent residency.
                   </p>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                  <button
-                    className="px-8 py-3 rounded-lg font-medium transition-colors"
-                    style={{ backgroundColor: '#ef4444', color: 'white' }}
-                    onMouseEnter={(e) => e.target.style.backgroundColor = '#dc2626'}
-                    onMouseLeave={(e) => e.target.style.backgroundColor = '#ef4444'}
-                    onClick={() => {
-                      benefitsRef.current?.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }}
-                  >
-                    What are the benefits?
-                  </button>
-                  <button
-                    className="border px-8 py-3 rounded-lg font-medium transition-colors"
-                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white' }}
-                    onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
-                    onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
-                  >
-                    Talk to our experts
-                  </button>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -336,98 +274,147 @@ After one year, they can apply for permanent residency.
         </div>
       </section>
 
-      <section className="pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8">
+      {/* Step by Step Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-8xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-            {/* Left side - Content */}
-            <div ref={contentRef} className={`bg-blue-100 slide-in-left ${contentVisible ? 'visible' : ''}`}>
-
-            {/* Content with padding */}
-            <div className="space-y-8 pr-12 lg:pr-18 pl-16 pb-16 pt-10">
-              {/* Warning Icon and Alert */}
-              <div className="flex items-start gap-3">
-                <h2 className="text-5xl lg:text-5xl font-light text-gray-900 leading-tight font-serif">
-                How to Apply for the Portugal <span className="bg-blue-300 text-gray-900 px-1 rounded transition-all duration-300 inline-block">D7 Visa?</span>
+          <div ref={contentRef} className={`mb-12 fade-in-up ${contentVisible ? 'visible' : ''}`}>
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6">
+              <div className='pl-8'>
+                <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+                  How to Apply for the Portugal <span className="bg-blue-300 text-gray-900 px-1 rounded transition-all duration-300 inline-block">D7 Visa?</span>
                 </h2>
-              </div>
-
-
-              {/* Step-by-step process */}
-              <div className="space-y-6">
-                {/* Step 1 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">1. Prepare your documents</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Check that you meet the eligibility criteria (such as minimum passive income). Gather supporting documents: passport, photos, proof of income, proof of accommodation, health insurance, criminal record certificate, and bank statements. You'll also need a Portuguese NIF (tax number) and a local bank account, which can be set up from abroad.
-                  </p>
-                </div>
-
-                {/* Step 2 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">2. Submit your application</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    File your completed application form and documents at your local Portuguese consulate/embassy. Pay the required fees. In some cases, the embassy may keep your passport while the application is processed.
-                  </p>
-                </div>
-
-                {/* Step 3 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receive your visa</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    If approved, your visa (valid for 120 days) will be stamped in your passport.
-                  </p>
-                </div>
-
-                {/* Step 4 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">4. Travel to Portugal & book SEF appointment</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Enter Portugal within the 120-day visa period. You must then attend an appointment with SEF (AIMA) to convert your D7 visa into a residence permit.
-                  </p>
-                </div>
-
-                {/* Step 5 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">5. SEF appointment</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    At SEF, bring all supporting documents: proof of funds, proof of accommodation, health insurance, NIF, and your visa. You'll also fill out forms for residency and a criminal record check. The appointment usually takes around 20 minutes.
-                  </p>
-                </div>
-
-                {/* Step 6 */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">6. Obtain your residence permit</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Once approved, you'll receive your residence card within about 2-3 weeks. The first permit is typically valid for 2 years, with options for renewal and eventual permanent residency or citizenship.
-                  </p>
-                </div>
+                <p className="text-lg text-gray-600 max-w-2xl">
+                  Follow our comprehensive guide to obtain your Portugal D7 Visa
+                </p>
               </div>
 
               {/* CTA Button */}
-              <button
-                onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
-                className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
-                style={{backgroundColor: 'rgb(59, 130, 246)'}}
-              >
-                SCHEDULE A MEETING
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
+              <div className="flex-shrink-0 pr-20">
+                <button
+                  onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
+                  className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
+                  style={{backgroundColor: 'rgb(59, 130, 246)'}}
+                >
+                  SCHEDULE A MEETING
+                </button>
+              </div>
             </div>
           </div>
-          
-          {/* Right side - Image */}
-          <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-            <img 
-              src="/image4.png" 
-              alt="Business meeting"
-              className="w-full h-130 lg:h-[900px] object-cover shadow-lg"
-            />
+
+          <div ref={contentRef} className={`fade-in-up ${contentVisible ? 'visible' : ''}`}>
+            {/* All 6 steps in 3-column grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Step 1 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.1s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">1</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Prepare your documents
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Check that you meet the eligibility criteria (such as minimum passive income). Gather supporting documents: passport, photos, proof of income, proof of accommodation, health insurance, criminal record certificate, and bank statements.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.2s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">2</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Submit your application
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  File your completed application form and documents at your local Portuguese consulate/embassy. Pay the required fees. In some cases, the embassy may keep your passport while the application is processed.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.3s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">3</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Receive your visa
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  If approved, your visa (valid for 120 days) will be stamped in your passport.
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.4s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">4</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Travel to Portugal & book SEF appointment
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Enter Portugal within the 120-day visa period. You must then attend an appointment with SEF (AIMA) to convert your D7 visa into a residence permit.
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.5s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">5</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  SEF appointment
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  At SEF, bring all supporting documents: proof of funds, proof of accommodation, health insurance, NIF, and your visa. You'll also fill out forms for residency and a criminal record check. The appointment usually takes around 20 minutes.
+                </p>
+              </div>
+
+              {/* Step 6 */}
+              <div
+                className="bg-gray-50 rounded-lg p-8"
+                style={{ transitionDelay: '0.6s' }}
+              >
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-blue-600">6</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Obtain your residence permit
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Once approved, you'll receive your residence card within about 2-3 weeks. The first permit is typically valid for 2 years, with options for renewal and eventual permanent residency or citizenship.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     </>
   )

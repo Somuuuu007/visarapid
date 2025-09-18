@@ -11,8 +11,15 @@ const WhyChooseUs = () => {
     fullName: '',
     email: '',
     phone: '',
-    subject: '',
-    message: ''
+    message: '',
+    country: '',
+    currentLocation: '',
+    profession: '',
+    experience: '',
+    education: '',
+    preferredDestination: '',
+    budget: '',
+    timeframe: '',
   })
   const [errors, setErrors] = useState({})
 
@@ -29,8 +36,15 @@ const WhyChooseUs = () => {
       fullName: '',
       email: '',
       phone: '',
-      subject: '',
-      message: ''
+      message: '',
+      country: '',
+      currentLocation: '',
+      profession: '',
+      experience: '',
+      education: '',
+      preferredDestination: '',
+      budget: '',
+      timeframe: '',
     })
   }
 
@@ -158,9 +172,7 @@ const WhyChooseUs = () => {
                     style={{backgroundColor: 'rgb(111, 54, 2)'}}
                   >
                     Contact Us Today
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    
                   </button>
                 </div>
               </div>
@@ -246,14 +258,7 @@ const WhyChooseUs = () => {
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>
 
-                  {/* Subject */}
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={(e) => handleInputChange('subject', e.target.value)}
-                    className="w-full p-4 border border-gray-300 rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white"
-                  />
+                  
 
                   {/* Message */}
                   <textarea
@@ -264,16 +269,7 @@ const WhyChooseUs = () => {
                     className="w-full p-4 border border-gray-300 rounded bg-gray-100 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white resize-none"
                   ></textarea>
 
-                  {/* Terms */}
-                  <div className="flex items-start space-x-2">
-                    <input type="checkbox" className="mt-1 w-4 h-4 text-teal-500" />
-                    <p className="text-sm text-gray-600">
-                      By submitting this form, you agree to our{' '}
-                      <a href="#" className="text-blue-500 hover:text-blue-600">Terms of Use</a>
-                      {' '}and{' '}
-                      <a href="#" className="text-blue-500 hover:text-blue-600">Privacy Policy</a>
-                    </p>
-                  </div>
+                  
 
                   {/* Submit Button */}
                   <button

@@ -6,7 +6,6 @@ const StartupVisa = () => {
   const [benefitsRef, benefitsVisible] = useScrollAnimation({ threshold: 0.1 })
   const [whoCanApplyRef, whoCanApplyVisible] = useScrollAnimation({ threshold: 0.1 })
   const [stepByStepRef, stepByStepVisible] = useScrollAnimation({ threshold: 0.1 })
-  const [currentStep, setCurrentStep] = useState(0)
   const [contactRef, contactVisible] = useScrollAnimation({ threshold: 0.1 })
 
    // Form state
@@ -108,9 +107,6 @@ const StartupVisa = () => {
     }
   ]
 
-  const nextStep = () => {
-    setCurrentStep((prev) => (prev + 1) % steps.length)
-  }
   return (
     <>
       <style>
@@ -227,10 +223,10 @@ const StartupVisa = () => {
             </div>
 
             {/* Benefits Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Support from Incubators Card */}
-              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
-                <div className="mb-6">
+              <div className={`bg-yellow-100 p-6 rounded-2xl hover-lift stagger-item h-80 flex flex-col ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+                <div className="flex-1">
                   <div className="mb-4 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -239,30 +235,38 @@ const StartupVisa = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     Support from Incubators
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700">
                     Every StartUP Visa applicant partners with a certified Portuguese incubator. Your incubator assists with:
                   </p>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Business documentation & compliance</li>
-                    <li>• Funding and grant applications</li>
-                    <li>• Securing office space at favorable terms</li>
-                    <li>• Connecting with investors and local entrepreneurs</li>
-                    <li>• Access to knowledge of the Portuguese and European markets</li>
-                  </ul>
                 </div>
               </div>
 
-             
+              {/* Tax Benefits Card */}
+              <div className={`bg-yellow-100 p-6 rounded-2xl hover-lift stagger-item h-80 flex flex-col ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+                <div className="flex-1">
+                  <div className="mb-1 scale-on-hover">
+                    <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    Tax Benefits (NHR Regime)
+                  </h3>
+                  <p className="text-gray-700">
+                    StartUP Visa holders must spend at least 183 days/year in Portugal. This makes you a Portuguese tax resident but you may qualify for the <strong>Non-Habitual Resident (NHR) regime.</strong>
+                  </p>
+                </div>
+              </div>
 
               {/* Pathway to Citizenship Card */}
-              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
-                <div className="mb-6">
-                  <div className="mb-4 scale-on-hover">
+              <div className={`bg-yellow-100 p-6 rounded-2xl hover-lift stagger-item h-80 flex flex-col ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
+                <div className="flex-1">
+                  <div className="mb-2 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Pathway to Citizenship
                   </h3>
                   <p className="text-gray-700">
@@ -272,35 +276,18 @@ const StartupVisa = () => {
               </div>
 
               {/* Affordable Residency Option Card */}
-              <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
-                <div className="mb-6">
-                  <div className="mb-4 scale-on-hover">
+              <div className={`bg-yellow-100 p-6 rounded-2xl hover-lift stagger-item h-80 flex flex-col ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
+                <div className="flex-1">
+                  <div className="mb-1 scale-on-hover">
                     <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     Affordable Residency Option
                   </h3>
                   <p className="text-gray-700">
-                    Compared with other visa routes, the StartUP Visa offers a cost-effective path to residency. After incubator approval, you can apply for your residence permit — valid for 2 years, renewable, and extendable to family members.
-                  </p>
-                </div>
-              </div>
-              
-               {/* Tax Benefits Card */}
-               <div className={`bg-yellow-100 p-8 rounded-2xl hover-lift stagger-item ${benefitsVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-                <div className="mb-6">
-                  <div className="mb-4 scale-on-hover">
-                    <svg className="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    Tax Benefits (NHR Regime)
-                  </h3>
-                  <p className="text-gray-700">
-                    StartUP Visa holders must spend at least 183 days/year in Portugal. This makes you a Portuguese tax resident but you may qualify for the <strong>Non-Habitual Resident (NHR) regime, paying only 20% income tax (instead of rates up to 48%) for 10 years.</strong>
+                    Compared with other visa routes, the StartUP Visa offers a cost-effective path to residency. After incubator approval, you can apply for your residence permit — valid for 2 years, and extendable to family members.
                   </p>
                 </div>
               </div>
@@ -321,7 +308,7 @@ const StartupVisa = () => {
             <div className={`fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
               <h2 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-gray-900 leading-tighter">
                 Who can <br/>
-                <span className="bg-yellow-300 text-gray-900 px-1 rounded transition-all duration-300 hover:bg-yellow-400 inline-block">Apply?</span>
+                <span className="bg-yellow-200 text-gray-900 px-1 rounded transition-all duration-300 inline-block">Apply?</span>
               </h2>
             </div>
 
@@ -329,7 +316,7 @@ const StartupVisa = () => {
             <div className={`fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <div className="space-y-10">
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-200 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       1
                     </div>
                   <p className="text-lg text-gray-700">
@@ -338,7 +325,7 @@ const StartupVisa = () => {
                 </div>
 
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-200 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       2
                     </div>
                   <p className="text-lg text-gray-700">
@@ -347,7 +334,7 @@ const StartupVisa = () => {
                 </div>
 
                 <div className={`flex items-start gap-3 fade-in-up ${whoCanApplyVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.5s' }}>
-                <div className="flex-shrink-0 w-10 h-10 bg-yellow-100 text-black rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-yellow-200 text-black rounded-full flex items-center justify-center font-bold text-sm">
                       3
                     </div>
                   <p className="text-lg text-gray-700">
@@ -361,167 +348,70 @@ const StartupVisa = () => {
       </section>
 
       {/* Step by Step Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div
-            ref={stepByStepRef}
-            className={`text-center mb-16 fade-in-up ${stepByStepVisible ? 'visible' : ''}`}
-          >
-            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div ref={stepByStepRef} className={`mb-12 fade-in-up ${stepByStepVisible ? 'visible' : ''}`}>
+            <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
               Step by Step Process
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl">
               Follow our comprehensive guide to obtain your Portugal Startup Visa
             </p>
           </div>
 
-          <div className={`relative flex items-center justify-center min-h-[750px] fade-in-up ${stepByStepVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+          <div ref={stepByStepRef} className={`fade-in-up ${stepByStepVisible ? 'visible' : ''}`}>
+            {/* First 6 steps in 2-column grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              {steps.slice(0, 6).map((step, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg p-8"
+                  style={{ transitionDelay: `${index * 0.1}s` }}
+                >
+                  {/* Number */}
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                      <span className="text-xl font-bold text-yellow-600">{index + 1}</span>
+                    </div>
+                  </div>
 
-            {/* Central Circle */}
-            <div className="absolute z-10 w-52 h-52 bg-yellow-300 rounded-full flex flex-col items-center justify-center text-center shadow-2xl border-4 border-white">
-              <h3 className="text-lg font-bold text-white mb-3 leading-tight">
-                Portugal<br/>Startup Visa<br/>Process
-              </h3>
-              <button
-                onClick={nextStep}
-                style={{
-                  backgroundColor: 'white',
-                  color: '#ef4444',
-                  border: 'none',
-                  padding: '8px 24px',
-                  borderRadius: '9999px',
-                  fontWeight: '600',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#f9fafb'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+                  {/* Title */}
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Last step centered */}
+            <div className="flex justify-center">
+              <div
+                className="bg-gray-50 rounded-lg p-8 max-w-lg w-full"
+                style={{ transitionDelay: `${6 * 0.1}s` }}
               >
-                {currentStep === 0 ? 'Start' : 'Next'}
-              </button>
-            </div>
+                {/* Number */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-yellow-600">7</span>
+                  </div>
+                </div>
 
-            {/* Step 1 - Top Left */}
-            <div className={`absolute top-4 left-8 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 0 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 0 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  1
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[0].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[0].description}</p>
-                </div>
+                {/* Title */}
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {steps[6].title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 leading-relaxed">
+                  {steps[6].description}
+                </p>
               </div>
             </div>
-
-            {/* Step 2 - Top Center */}
-            <div className={`absolute top-4 left-1/2 transform -translate-x-1/2 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 1 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 1 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  2
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[1].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[1].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3 - Top Right */}
-            <div className={`absolute top-4 right-8 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 2 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 2 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  3
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[2].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[2].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 4 - Left Side */}
-            <div className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 3 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 3 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  4
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[3].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[3].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 5 - Right Side */}
-            <div className={`absolute right-4 top-1/2 transform -translate-y-1/2 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 4 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 4 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  5
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[4].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[4].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 6 - Bottom Left */}
-            <div className={`absolute bottom-4 left-1/3 transform -translate-x-1/2 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 5 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 5 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  6
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[5].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[5].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 7 - Bottom Right */}
-            <div className={`absolute bottom-4 right-1/3 transform translate-x-1/2 w-80 transition-all duration-500 fade-in-up ${stepByStepVisible ? 'visible' : ''} ${
-              currentStep === 6 ? 'p-6 shadow-xl scale-105 z-20' : 'p-5 shadow-md z-10'
-            } bg-white rounded-xl hover:shadow-lg`} style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4">
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  currentStep === 6 ? 'bg-yellow-300 text-white' : 'bg-yellow-400 text-white'
-                }`}>
-                  7
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">{steps[6].title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{steps[6].description}</p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -602,14 +492,6 @@ const StartupVisa = () => {
                       {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
 
-                    {/* Subject */}
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      value={formData.subject}
-                      onChange={(e) => handleInputChange('subject', e.target.value)}
-                      className="w-full p-4 border border-gray-300 rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-400 focus:bg-white transition-all"
-                    />
 
                     {/* Message */}
                     <textarea
@@ -620,21 +502,12 @@ const StartupVisa = () => {
                       className="w-full p-4 border border-gray-300 rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-400 focus:bg-white resize-none transition-all"
                     ></textarea>
 
-                    {/* Terms */}
-                    <div className="flex items-start space-x-3">
-                      <input type="checkbox" className="mt-1 w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-400" />
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        By submitting this form, you agree to our{' '}
-                        <a href="#" className="text-red-500 hover:text-red-600 underline">Terms of Use</a>
-                        {' '}and{' '}
-                        <a href="#" className="text-red-500 hover:text-red-600 underline">Privacy Policy</a>
-                      </p>
-                    </div>
+                   
 
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 transform hover:scale-105 shadow-lg"
+                      className="w-full text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 transform hover:scale-100 shadow-lg" style={{backgroundColor: '#ef4444'}} 
                     >
                       Schedule Free Consultation
                     </button>
