@@ -33,59 +33,37 @@ const ForBusiness = () => {
         <div className="max-w-8xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left side - Content */}
-            <div ref={contentRef} className={`bg-blue-100 slide-in-left ${contentVisible ? 'visible' : ''} min-h-[500px] lg:min-h-[500px]`}>
+            <div ref={contentRef} className={`bg-blue-100 slide-in-left ${contentVisible ? 'visible' : ''}`}>
 
             {/* Content with padding */}
             <div className="space-y-6 pl-8 lg:pl-12 pr-6 pb-8 pt-6">
-              {/* Warning Icon and Alert */}
-              <div className="flex items-start gap-3">
-                <h2 className="text-2xl lg:text-3xl font-light text-gray-900 leading-tight font-serif">
-                  The clock is ticking—<br />move to a developed country before it's too late!
-                </h2>
-              </div>
 
-              {/* Description */}
-              <ul className="space-y-2 text-gray-700 text-base leading-relaxed">
-                <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span>US, Canada, Australia, and UK have closed most pathways.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span>Study visas now demand a hefty investment.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span>Work visas are tougher than ever amid the AI crisis.</span>
-                </li>
-              </ul>
-
-              {/* Main Message */}
-              <h3 className="text-xl lg:text-2xl font-light text-gray-900 leading-tight font-serif">
-                When AI takes over jobs,<br />immigration opportunities will disappear.
-              </h3>
+              {/* Main heading */}
+              <h2 className="text-3xl lg:text-4xl font-light text-gray-900 leading-tight font-serif">
+              When AI takes over jobs, <br />
+              immigration opportunities will disappear.
+              </h2> 
 
               {/* Solution */}
               <h4 className="text-xl lg:text-2xl font-medium text-gray-900 leading-tight">
                 Visa Rapid has the solution you need today:
               </h4>
 
-              {/* Solution Points */}
-              <ul className="space-y-2 text-gray-700 text-base leading-relaxed">
+              {/* Description */}
+              <ul className="space-y-2 text-gray-700 text-lg leading-relaxed">
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span>Start your journey with just a business idea<br />and move to Europe permanently.</span>
+                  <span>Start your journey with just a business idea and move to Europe <br />
+                     permanently.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span>The world's most predictable and affordable<br />immigration pathway.</span>
+                  <span>The world's most predictable and affordable immigration pathway.</span>
                 </li>
               </ul>
 
-              {/* Final Message */}
-              <p className="text-gray-900 text-base font-medium leading-relaxed">
-                Don't wait until it's all over—<br />we truly believe in acting now!
-              </p>
+              <h3 className='text-black'>Don’t wait until it’s all over—we truly believe in acting now!</h3>
+
 
               {/* CTA Button */}
               <button
@@ -103,7 +81,7 @@ const ForBusiness = () => {
             <img
               src="/image4.png"
               alt="Business meeting"
-              className="w-full h-96 lg:h-[590px] object-cover shadow-lg"
+              className="w-full h-96 lg:h-[540px] object-cover shadow-lg"
             />
           </div>
         </div>
