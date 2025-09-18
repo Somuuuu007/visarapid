@@ -351,10 +351,10 @@ const StartupVisa = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div ref={stepByStepRef} className={`mb-12 fade-in-up ${stepByStepVisible ? 'visible' : ''}`}>
-            <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 text-center">
               Step by Step Process
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg text-gray-600 max-w-2xl text-center mx-auto">
               Follow our comprehensive guide to obtain your Portugal Startup Visa
             </p>
           </div>
