@@ -21,8 +21,8 @@ const HomePage = () => (
     <HeroSection />
     <ForIndividuals />
     <ForBusiness />
-    <StepByStep />
     <WhyChooseUs />
+    <StepByStep />
     <StatsSection />
     <ScheduleMeeting />
   </>

@@ -129,7 +129,7 @@ const WhyChooseUs = () => {
           }
         `}
       </style>
-      <section className="pt-1 sm:pt-1 lg:pt-1 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="pt-1 sm:pt-6 lg:pt-10 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-8xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
@@ -172,7 +172,7 @@ const WhyChooseUs = () => {
                 </p>
 
                 {/* CTA Button */}
-                <div className="flex justify-center ">
+                <div className="flex justify-center mt-5 ">
                   <button
                     onClick={openModal}
                     className="text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors font-medium flex items-center gap-2"

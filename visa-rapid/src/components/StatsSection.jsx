@@ -65,7 +65,7 @@ const StatsSection = () => {
           }
         `}
       </style>
-      <section className="py-8 sm:py-8 lg:py-10 px-4 sm:px-6 lg:px-10 mb-18 bg-blue-200">
+      <section className="py-8 sm:py-8 lg:py-10 px-4 sm:px-6 lg:px-10 mb-18 bg-blue-200 mt-10">
         <div className="max-w-8xl mx-auto">
           <div
             ref={sectionRef}
