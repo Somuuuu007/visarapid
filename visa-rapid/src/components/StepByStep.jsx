@@ -38,7 +38,7 @@ const StepByStep = () => {
         </div>
       ),
       title: "Application Submission",
-      description: "We manage your visa application process, from form preparation to submission, eliminating errors and enhancing success rates. We also plan for the future, with most of our clients paying no more than 3.8% tax over 20 years with our proprietary financial modelling in conjunction with the 10 year Non Habitual Residency (NHR) tax regime."
+      description: "Submit your application with ease. Our team guides you through every step from filling out forms to preparing documents ensuring your Portugal visa application is accurate, complete, and ready for approval."
     },
     {
       icon: (
@@ -49,9 +49,9 @@ const StepByStep = () => {
         </div>
       ),
       title: "Continuous Support",
-      description: "Our team offers all year-round assistance guiding you through each visa application stage, keeping you informed of new opportunities with your investments, financial planning, tax savings and visa benefits. It is vital that we plan for 10-20 years to maximise your life and financial status in Portugal."
+      description: "We don’t stop at application submission our team stays connected with you throughout the entire process. Whether it’s tracking updates, clarifying requirements, or resolving queries, we provide ongoing guidance to make your visa journey smooth and worry-free."
     },
-    {
+      {
       icon: (
         <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
           <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ const StepByStep = () => {
         </div>
       ),
       title: "Customised Solutions",
-      description: "Understanding the uniqueness of each visa application, we offer bespoke solutions and NHR/NHR 2.0 tax regimes support to optimise your financial and tax planning, ensuring adherence to criteria and regulations."
+      description: "Every journey is unique  and so is our approach. Our legal team craft a personalised visa strategy designed around your goals, background, and future plans. With tailored guidance and one-to-one support, we ensure the best pathway for a successful visa outcome."
     }
   ]
 

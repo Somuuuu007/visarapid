@@ -71,7 +71,7 @@ const ForBusiness = () => {
                 className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
                 style={{backgroundColor: 'rgb(59, 130, 246)'}}
               >
-                SCHEDULE A MEETING
+                Schedule a meeting
               </button>
             </div>
           </div>

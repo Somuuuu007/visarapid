@@ -32,8 +32,9 @@ Are you a working professional and want to
             <div ref={contentRef} className={`fade-in-up animation-delay-200 ${contentVisible ? 'visible' : ''}`}>
               <p className="text-gray-600 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 
-            We can help with your immigration journey 
-            with an investment starting from 8 Lakhs.
+              Begin your immigration journey with minimal 
+upfront investment, designed to keep the 
+process simple and achievable.
               </p>
             </div>
             
@@ -56,7 +57,7 @@ Are you a working professional and want to
               {/* First image - positioned on the left and slightly up */}
                 <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-right animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
                   <img 
-                    src="/image6.png" 
+                    src="/Entrepreneur.png" 
                     alt="Family immigration consultation"
                     className="w-80 h-60 lg:w-70 lg:h-120 xl:w-[300px] xl:h-130 object-cover shadow-xl border-b-8 border-orange-300"
                   />
@@ -65,7 +66,7 @@ Are you a working professional and want to
               {/* Second image - positioned on the right and slightly down */}
                 <div ref={image2Ref} className={`absolute right-0 top-24 lg:top-32 xl:top-30 fade-in-right animation-delay-500 ${image2Visible ? 'visible' : ''}`}>
                   <img 
-                    src="/Job.png" 
+                    src="/image1.png" 
                     alt="Business immigration meeting"
                     className="w-72 h-52 lg:w-70 lg:h-95 xl:w-96 xl:h-120 object-cover shadow-xl border-t-8 border-blue-400"
                   />

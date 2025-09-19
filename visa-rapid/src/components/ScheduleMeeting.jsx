@@ -59,7 +59,7 @@ const ScheduleMeeting = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-3 mb-6">
                 <span className="text-gray-700 font-medium text-sm sm:text-base">Prefer messengers?</span>
                 <a 
-                  href="https://wa.me/9899982721" 
+                  href="https://wa.me/9910578099" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 !text-green-600 hover:!text-green-700 transition-colors cursor-pointer"
