@@ -182,25 +182,27 @@ const StartupVisa = () => {
                   >
                     What are the benefits?
                   </button>
-                  <button
-                    className="border px-8 py-3 rounded-lg font-medium transition-colors"
-                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white' }}
+                  <a
+                    href="https://calendly.com/someshlingwal1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
+                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white', textDecoration: 'none' }}
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
                     Talk to our experts
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
-
             {/* Right Column - Image */}
             <div className="order-2 lg:order-2">
               <div className="relative">
                 <img
-                  src="/Startup.png"
+                  src="/Startup1.png"
                   alt="Portugal D2 Visa Documentation"
-                  className="w-full h-130 object-cover rounded-2xl"
+                  className="w-full h-130 object-cover"
                 />
               </div>
             </div>

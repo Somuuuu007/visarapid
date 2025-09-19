@@ -194,13 +194,15 @@ const ForIndividuals = () => {
               </ul>
               
               {/* CTA Button */}
-              <button 
-                onClick={openModal}
-                className="text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors font-medium flex items-center gap-2" 
-                style={{backgroundColor: 'rgb(111, 54, 2)'}}
+              <a
+                href="https://calendly.com/someshlingwal1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-md transition-colors font-medium items-center gap-2 inline-flex"
+                style={{backgroundColor: 'rgb(111, 54, 2)', color: 'white'}}
               >
                 Book An Appointment
-              </button>
+              </a>
             </div>
           </div>
         </div>

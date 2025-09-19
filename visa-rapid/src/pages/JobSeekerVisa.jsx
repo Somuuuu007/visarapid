@@ -220,14 +220,17 @@ const JobSeekerVisa = () => {
                   >
                     What are the benefits?
                   </button>
-                  <button
-                    className="border px-8 py-3 rounded-lg font-medium transition-colors"
-                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white' }}
+                  <a
+                    href="https://calendly.com/someshlingwal1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
+                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white', textDecoration: 'none' }}
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
                     Talk to our experts
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -238,7 +241,7 @@ const JobSeekerVisa = () => {
                 <img
                   src="/Job.png"
                   alt="Portugal Job Seeker Visa"
-                  className="w-full h-130 object-cover rounded-2xl"
+                  className="w-full h-130 object-cover"
                 />
               </div>
             </div>
@@ -340,66 +343,66 @@ const JobSeekerVisa = () => {
 
       {/* Eligibility and Processing Time Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div
             ref={eligibilityRef}
-            className={`grid grid-cols-1 lg:grid-cols-5 gap-8 fade-in-up ${eligibilityVisible ? 'visible' : ''}`}
+            className={`fade-in-up ${eligibilityVisible ? 'visible' : ''}`}
           >
-            {/* Eligibility Criteria Container - 60% (3/5) */}
-            <div className={`lg:col-span-3 bg-gray-300 p-8 rounded-2xl hover-lift fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+            {/* Eligibility Criteria Container*/}
+            <div className={`bg-gray-300 p-8 rounded-2xl fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                 {/* Left Column - Text Content */}
                 <div>
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-3 mb-6 justify-center">
                     <div className="scale-on-hover">
                       <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                       </svg>
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900">
+                    <h2 className="text-4xl font-bold text-gray-900 ">
                       Eligibility Criteria
                     </h2>
                   </div>
-                  <div className="space-y-5">
+                  <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                       Bachelor's degree
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                        Health insurance
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         No requirement for IELTS
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                       Evidence of having sufficient funds
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                        Authenticated airplane reservations
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-3">
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                       Evidence of having booked accommodation in Portugal
                       </p>
                     </div>
@@ -412,41 +415,10 @@ const JobSeekerVisa = () => {
                     <img
                       src="/Job1.jpg"
                       alt="Job Application Accepted"
-                      className="w-90 h-85 object-cover rounded-xl shadow-lg"
+                      className="w-90 h-85 object-cover rounded-xl shadow-lg ml-12"
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Processing Time Container - 40% (2/5) */}
-            <div className={`lg:col-span-2 bg-gray-300 p-8 rounded-2xl hover-lift fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-              <div className="mb-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="scale-on-hover">
-                    <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-4xl font-bold text-gray-900">
-                    Processing Time
-                  </h2>
-                </div>
-
-                <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                  It usually takes 2 months to process a Portugal Jobseeker Visa. However, based on the situation, such as the stage of the year, if all your documents are in order, etc., it may take more time. Therefore, you must apply around a month ahead of your intended travel date but not before three months.
-                </p>
-
-                {/* Apply Now Button */}
-                <button
-                  onClick={openModal}
-                  className="!bg-red-500 hover:!bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 mt-10"
-                >
-                  Apply Now
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
               </div>
             </div>
           </div>

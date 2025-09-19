@@ -139,7 +139,7 @@ const Residency = () => {
                 <img
                   src="/Residency.png"
                   alt="Portugal D2 Visa Documentation"
-                  className="w-full h-160 object-cover rounded-2xl"
+                  className="w-full h-160 object-cover "
                 />
               </div>
             </div>
@@ -172,8 +172,21 @@ After one year, they can apply for permanent residency.
 
                 
               </div>
+              <a
+                    href="https://calendly.com/someshlingwal1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
+                    style={{ borderColor: '#d1d5db', color: '#374151', backgroundColor: 'white', textDecoration: 'none' }}
+                    onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
+                    onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
+                  >
+                    Talk to our experts
+                  </a>
             </div>
+            
           </div>
+          
         </div>
       </section>
 
@@ -187,7 +200,7 @@ After one year, they can apply for permanent residency.
             className={`grid grid-cols-1 lg:grid-cols-5 gap-8 fade-in-up ${eligibilityVisible ? 'visible' : ''}`}
           >
             {/* Advantages Content Container - 60% (3/5) */}
-            <div className={`lg:col-span-3 bg-green-100 p-8 rounded-2xl hover-lift fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+            <div className={`lg:col-span-3 bg-green-100 p-8 rounded-2xl fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
               <div className="mb-6">
                 <h2 className="text-5xl font-medium font-serif text-gray-900 mb-8">
                   Discover the advantages of living in Portugal
@@ -286,17 +299,6 @@ After one year, they can apply for permanent residency.
                 <p className="text-lg text-gray-600 max-w-2xl">
                   Follow our comprehensive guide to obtain your Portugal D7 Visa
                 </p>
-              </div>
-
-              {/* CTA Button */}
-              <div className="flex-shrink-0 pr-20">
-                <button
-                  onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
-                  className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
-                  style={{backgroundColor: 'rgb(59, 130, 246)'}}
-                >
-                  SCHEDULE A MEETING
-                </button>
               </div>
             </div>
           </div>
