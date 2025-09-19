@@ -79,7 +79,7 @@ const ForBusiness = () => {
           {/* Right side - Image */}
           <div ref={imageRef} className={`relative slide-in-right ${imageVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <img
-              src="/image4.png"
+              src="/image4.webp"
               alt="Business meeting"
               className="w-full h-96 lg:h-[550px] object-cover shadow-lg"
             />
