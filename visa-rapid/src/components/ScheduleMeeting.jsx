@@ -30,18 +30,18 @@ const ScheduleMeeting = () => {
         `}
       </style>
       <section className="pt-8 sm:pt-12 lg:pt-20 pb-10 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto bg-gray-50 px-4 sm:px-6 lg:px-10 rounded-lg">
+        <div className="max-w-6xl mx-auto bg-gray-50 px-4 sm:px-6 lg:px-15 rounded-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left side - Content */}
             <div ref={contentRef} className={`text-center lg:text-left slide-in-left ${contentVisible ? 'visible' : ''}`}>
             <div>
-              <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 sm:mb-4 pt-6">
+              <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 sm:mb-4 pt-10">
                 Schedule a meeting
               </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 leading-tight mb-4 sm:mb-6">
                 Let's discuss the details
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-md text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Schedule an online meeting with our legal team. They will review your case, estimate the costs, and recommend the best solution based on your goals.
                 </p>
             </div>
@@ -79,14 +79,9 @@ const ScheduleMeeting = () => {
             <div className="h-[300px] sm:h-[350px] lg:h-[450px] flex items-end justify-center lg:justify-start overflow-visible">
               <img 
                 src="/Lawyer.png" 
-                alt="Zlata Erlach - Head of the Austrian office" 
-                className="h-[350px] sm:h-[400px] lg:h-[550px] w-auto object-cover object-center lg:object-left"
+                alt="Lawyer" 
+                className="h-[350px] sm:h-[400px] lg:h-[550px] w-auto object-cover object-center lg:object-left lg:ml-15"
               />
-            </div>
-            
-            {/* Profile card overlay */}
-            <div className="absolute top-4 sm:top-8 lg:top-30 right-2 sm:right-4 lg:right-6 p-3 sm:p-4 max-w-xs bg-white/90 backdrop-blur-sm rounded-lg shadow-lg">
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 ">Talk to a Lawyer</h3>
             </div>
           </div>
         </div>
