@@ -57,7 +57,7 @@ process simple and achievable.
               {/* First image - positioned on the left and slightly up */}
                 <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-right animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
                   <img 
-                    src="/Entrepreneur.png" 
+                    src="/Entrepreneur.webp" 
                     alt="Family immigration consultation"
                     className="w-80 h-60 lg:w-70 lg:h-120 xl:w-[300px] xl:h-130 object-cover shadow-xl border-b-8 border-orange-300"
                   />
@@ -66,7 +66,7 @@ process simple and achievable.
               {/* Second image - positioned on the right and slightly down */}
                 <div ref={image2Ref} className={`absolute right-0 top-24 lg:top-32 xl:top-30 fade-in-right animation-delay-500 ${image2Visible ? 'visible' : ''}`}>
                   <img 
-                    src="/image1.png" 
+                    src="/image1.webp" 
                     alt="Business immigration meeting"
                     className="w-72 h-52 lg:w-70 lg:h-95 xl:w-96 xl:h-120 object-cover shadow-xl border-t-8 border-blue-400"
                   />
