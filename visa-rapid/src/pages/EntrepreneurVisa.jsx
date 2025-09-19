@@ -145,7 +145,7 @@ const EntrepreneurVisa = () => {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src="/Entrepreneur.png"
+                  src="/Entrepreneur.webp"
                   alt="Portugal D2 Visa Documentation"
                   className="w-full h-160 object-cover "
                 />
@@ -414,7 +414,7 @@ const EntrepreneurVisa = () => {
             {/* Right Column - Image (30%) */}
             <div className={`lg:col-span-3 relative fade-in-right ${detailsVisible ? 'visible' : ''}`}>
               <img
-                src="/Visa1.png"
+                src="/Visa1.webp"
                 alt="Portugal historic building"
                 className="w-full h-104 rounded-3xl shadow-lg transition-transform duration-500"
               />
@@ -513,7 +513,7 @@ const EntrepreneurVisa = () => {
             <div className={`fade-in-right ${processVisible ? 'visible' : ''}`}>
               <div className="relative">
                 <img
-                  src="/Visa.png"
+                  src="/Visa.webp"
                   alt="Portugal street scene with colorful buildings and tram"
                   className="w-full h-150 object-cover rounded-2xl shadow-lg transition-transform duration-500"
                 />
@@ -533,7 +533,7 @@ const EntrepreneurVisa = () => {
             {/* Background Image */}
             <div className="absolute inset-0">
               <img
-                src="/Visa2.jpg"
+                src="/Visa2.webp"
                 alt="Portugal castle landscape"
                 className="w-full h-full object-cover"
               />

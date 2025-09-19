@@ -239,7 +239,7 @@ const JobSeekerVisa = () => {
             <div className="order-2 lg:order-2">
               <div className="relative">
                 <img
-                  src="/Job.png"
+                  src="/Job.webp"
                   alt="Portugal Job Seeker Visa"
                   className="w-full h-130 object-cover"
                 />
@@ -413,7 +413,7 @@ const JobSeekerVisa = () => {
                 <div className="flex items-center justify-center">
                   <div className="relative">
                     <img
-                      src="/Job1.jpg"
+                      src="/Job1.webp"
                       alt="Job Application Accepted"
                       className="w-90 h-85 object-cover rounded-xl shadow-lg ml-12"
                     />

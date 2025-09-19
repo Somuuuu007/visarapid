@@ -137,7 +137,7 @@ const Residency = () => {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src="/Residency.png"
+                  src="/Residency.webp"
                   alt="Portugal D2 Visa Documentation"
                   className="w-full h-160 object-cover "
                 />
@@ -277,7 +277,7 @@ After one year, they can apply for permanent residency.
             <div className={`lg:col-span-2 flex items-center justify-center fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <div className="relative">
                 <img
-                  src="/residency2.png"
+                  src="/residency2.webp"
                   alt="Portugal Residency Documentation"
                   className="w-full h-165 object-cover rounded-xl shadow-lg"
                 />

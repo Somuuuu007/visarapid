@@ -200,7 +200,7 @@ const StartupVisa = () => {
             <div className="order-2 lg:order-2">
               <div className="relative">
                 <img
-                  src="/Startup1.png"
+                  src="/Startup1.webp"
                   alt="Portugal D2 Visa Documentation"
                   className="w-full h-130 object-cover"
                 />
@@ -428,7 +428,7 @@ const StartupVisa = () => {
             {/* Background Image */}
             <div className="absolute inset-0">
               <img
-                src="/Visa2.jpg"
+                src="/Visa2.webp"
                 alt="Portugal castle landscape"
                 className="w-full h-full object-cover"
               />
