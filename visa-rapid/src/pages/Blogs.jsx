@@ -15,37 +15,35 @@ const Blogs = () => {
         </div>
 
         {/* Featured Article */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 bg-gray-100 rounded-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 bg-gray-100 rounded-2xl p-4 lg:p-0">
           {/* Left Column - Image */}
           <div className="order-2 lg:order-1">
             <img
               src="/Blog.jpg"
               alt="Lisbon's iconic Rua Augusta Arch"
-              className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-2xl shadow-lg"
             />
           </div>
 
           {/* Right Column - Content */}
-          <div className="order-1 lg:order-2 lg:pl-1">
+          <div className="order-1 lg:order-2 p-4 lg:pl-1">
             <div className="mb-4">
               <span className="inline-block px-3 py-1 bg-blue-100 text-gray-600 text-sm rounded-full">
                 Visa & Finance
               </span>
             </div>
 
-            <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-6 leading-tight ">
-            Luxembourg to scrap Golden <br />
-            Visa as Portugal stands strong
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 lg:mb-6 leading-tight">
+            Luxembourg to scrap Golden Visa as Portugal stands strong
             </h2>
 
-            <p className="text-gray-600 text-md leading-relaxed">
-            Luxembourg is set to terminate its Golden Visa programme following seven <br />
-             years of limited success and uptake.
+            <p className="text-gray-600 text-sm sm:text-md leading-relaxed mb-6">
+            Luxembourg is set to terminate its Golden Visa programme following seven years of limited success and uptake.
             </p>
 
             <a
               href="#"
-              className="inline-flex items-center font-medium transition-colors mt-38"
+              className="inline-flex items-center font-medium transition-colors lg:mt-35"
               style={{color: 'black'}}
             >
               Read more
