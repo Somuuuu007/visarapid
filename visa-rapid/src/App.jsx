@@ -14,6 +14,7 @@ import EntrepreneurVisa from './pages/EntrepreneurVisa'
 import StartupVisa from './pages/StartupVisa'
 import JobSeekerVisa from './pages/JobSeekerVisa'
 import Residency from './pages/Residency'
+import Blogs from './pages/Blogs'
 
 // Home page component
 const HomePage = () => (
@@ -68,6 +69,12 @@ const App = () => {
             <Route path="/residency" element={
               <>
                 <Residency />
+                <Footer />
+              </>
+            } />
+            <Route path="/blogs" element={
+              <>
+                <Blogs />
                 <Footer />
               </>
             } />
