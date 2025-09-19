@@ -19,7 +19,7 @@ const Blogs = () => {
           {/* Left Column - Image */}
           <div className="order-2 lg:order-1">
             <img
-              src="/Blog.jpg"
+              src="/Blog.webp"
               alt="Lisbon's iconic Rua Augusta Arch"
               className="w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-2xl shadow-lg"
             />
@@ -59,7 +59,7 @@ const Blogs = () => {
           {/* Article 1 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog2.jpg"
+              src="/Blog2.webp"
               alt="Luxembourg Airport"
               className="w-full h-48 object-cover rounded-2xl"
             />
@@ -88,7 +88,7 @@ const Blogs = () => {
           {/* Article 2 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog3.jpg"
+              src="/Blog3.webp"
               alt="Portuguese Passport"
               className="w-full h-48 object-cover rounded-2xl"
             />
@@ -117,7 +117,7 @@ const Blogs = () => {
           {/* Article 3 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog4.jpg"
+              src="/Blog4.webp"
               alt="Portuguese Street Scene"
               className="w-full h-48 object-cover rounded-2xl"
             />
@@ -149,7 +149,7 @@ const Blogs = () => {
           {/* Article 4 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog5.jpg"
+              src="/Blog5.webp"
               alt="European Business Scene"
               className="w-full h-48 object-cover rounded-2xl"
             />
@@ -178,7 +178,7 @@ const Blogs = () => {
           {/* Article 5 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog6.jpg"
+              src="/Blog6.webp"
               alt="Healthcare in Portugal"
               className="w-full h-48 object-cover rounded-2xl"
             />
@@ -207,7 +207,7 @@ const Blogs = () => {
           {/* Article 6 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <img
-              src="/Blog7.jpg"
+                src="/Blog7.webp"
               alt="Portuguese Tax Benefits"
               className="w-full h-48 object-cover rounded-2xl"
             />
