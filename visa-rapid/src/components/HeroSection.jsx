@@ -38,7 +38,7 @@ process simple and achievable.
               </p>
             </div>
             
-            <div ref={buttonsRef} className={`fade-in-up animation-delay-400 ${buttonsVisible ? 'visible' : ''}`}>
+            <div ref={buttonsRef} className={`fade-in-right animation-delay-400 ${buttonsVisible ? 'visible' : ''}`}>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
                 <button 
                   onClick={() => window.open('https://calendly.com/nikita-visarapid/30min?back=1', '_blank', 'noopener,noreferrer')}
