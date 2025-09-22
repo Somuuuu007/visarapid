@@ -181,7 +181,7 @@ After one year, they can apply for permanent residency.
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
-                    Arrange a Call
+                    Talk to our experts
                   </a>
             </div>
             
@@ -201,11 +201,11 @@ After one year, they can apply for permanent residency.
           >
             {/* Advantages Content Container - 60% (3/5) */}
             <div className={`lg:col-span-3 bg-green-100 p-8 rounded-2xl fade-in-up ${eligibilityVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
-              <div className="mb-6">
+              <div className="mb-1">
                 <h2 className="text-5xl font-medium font-serif text-gray-900 mb-8">
                   Discover the advantages of living in Portugal
                 </h2>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-1.5 h-1.5 bg-black rounded-full mt-3">
                     </div>
@@ -270,6 +270,21 @@ After one year, they can apply for permanent residency.
                     </p>
                   </div>
                 </div>
+
+                {/* Get Expert Advice Button */}
+                <div className="mt-8">
+                  <a
+                    href="https://calendly.com/nikita-visarapid/30min?back=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
+                    style={{ backgroundColor: '#ef4444', color: 'white', textDecoration: 'none' }}
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#dc2626'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = '#ef4444'}
+                  >
+                    Arrange a call
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -279,7 +294,7 @@ After one year, they can apply for permanent residency.
                 <img
                   src="/residency2.webp"
                   alt="Portugal Residency Documentation"
-                  className="w-full h-165 object-cover rounded-xl shadow-lg"
+                  className="w-full h-171 object-cover rounded-xl shadow-lg"
                 />
               </div>
             </div>

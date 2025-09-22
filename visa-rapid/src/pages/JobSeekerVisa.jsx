@@ -229,7 +229,7 @@ const JobSeekerVisa = () => {
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
-                    Get expert advice
+                    Talk to our experts
                   </a>
                 </div>
               </div>
@@ -407,6 +407,21 @@ const JobSeekerVisa = () => {
                       </p>
                     </div>
                   </div>
+
+                  {/* Get Expert Advice Button */}
+                  <div className="mt-8 flex justify-center">
+                    <a
+                      href="https://calendly.com/nikita-visarapid/30min?back=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
+                      style={{ backgroundColor: '#ef4444', color: 'white', textDecoration: 'none' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#dc2626'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#ef4444'}
+                    >
+                      Get expert advice
+                    </a>
+                  </div>
                 </div>
 
                 {/* Right Column - Image */}
@@ -415,7 +430,7 @@ const JobSeekerVisa = () => {
                     <img
                       src="/Job1.webp"
                       alt="Job Application Accepted"
-                      className="w-90 h-85 object-cover rounded-xl shadow-lg ml-12"
+                      className="w-90 h-95 object-cover rounded-xl shadow-lg ml-12"
                     />
                   </div>
                 </div>
