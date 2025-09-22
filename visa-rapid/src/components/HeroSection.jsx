@@ -9,11 +9,11 @@ const HeroSection = () => {
   const [image2Ref, image2Visible] = useScrollAnimation({ threshold: 0.1 })
 
   return (
-    <section className="bg-white pt-10 sm:pt-14 lg:pt-14 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-white pt-10 sm:pt-8 lg:pt-10 pb-6 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-8xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Content */}
-          <div className="space-y-4 sm:space-y-6 text-center lg:text-left sm:ml-5 lg:mt-5">
+          <div className="space-y-4 sm:space-y-6 text-center lg:text-left sm:ml-5 lg:mt-5 lg:ml-2">
             <div ref={titleRef} className={`fade-in-left ${titleVisible ? 'visible' : ''}`}>
               <p className="text-2xl sm:text-3xl lg:text-4xl font-extralight text-gray-800 tracking-[0.2em] sm:tracking-[0.3em] font-serif">
                 VISA-RAPID:
