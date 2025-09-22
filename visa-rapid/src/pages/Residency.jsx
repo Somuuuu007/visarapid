@@ -173,7 +173,7 @@ After one year, they can apply for permanent residency.
                 
               </div>
               <a
-                    href="https://calendly.com/someshlingwal1"
+                    href="https://calendly.com/nikita-visarapid/30min?back=1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
@@ -181,7 +181,7 @@ After one year, they can apply for permanent residency.
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
-                    Talk to our experts
+                    Arrange a Call
                   </a>
             </div>
             

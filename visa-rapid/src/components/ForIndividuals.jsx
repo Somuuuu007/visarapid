@@ -195,7 +195,7 @@ const ForIndividuals = () => {
               
               {/* CTA Button */}
               <a
-                href="https://calendly.com/someshlingwal1"
+                href="https://calendly.com/nikita-visarapid/30min?back=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 rounded-md transition-colors font-medium items-center gap-2 inline-flex"

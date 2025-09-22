@@ -67,7 +67,7 @@ const ForBusiness = () => {
 
               {/* CTA Button */}
               <button
-                onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://calendly.com/nikita-visarapid/30min?back=1', '_blank', 'noopener,noreferrer')}
                 className="text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 cursor-pointer"
                 style={{backgroundColor: 'rgb(59, 130, 246)'}}
               >

@@ -34,7 +34,7 @@ const styles = `
 
             {/* Book Appointment Button */}
             <a
-              href="https://calendly.com/someshlingwal1"
+              href="https://calendly.com/nikita-visarapid/30min?back=1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-lg transition-colors duration-200"

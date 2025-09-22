@@ -48,7 +48,7 @@ const ScheduleMeeting = () => {
 
             <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
               <a 
-                href="https://calendly.com/someshlingwal1" 
+                href="https://calendly.com/nikita-visarapid/30min?back=1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block !bg-orange-500 hover:!bg-orange-600 !text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-colors duration-200 border-none outline-none rounded-md cursor-pointer text-center w-full sm:w-auto"

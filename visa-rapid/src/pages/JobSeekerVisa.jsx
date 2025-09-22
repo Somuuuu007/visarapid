@@ -221,7 +221,7 @@ const JobSeekerVisa = () => {
                     What are the benefits?
                   </button>
                   <a
-                    href="https://calendly.com/someshlingwal1"
+                    href="https://calendly.com/nikita-visarapid/30min?back=1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"
@@ -229,7 +229,7 @@ const JobSeekerVisa = () => {
                     onMouseEnter={(e) => e.target.style.borderColor = '#9ca3af'}
                     onMouseLeave={(e) => e.target.style.borderColor = '#d1d5db'}
                   >
-                    Talk to our experts
+                    Get expert advice
                   </a>
                 </div>
               </div>

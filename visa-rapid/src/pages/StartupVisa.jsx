@@ -183,7 +183,7 @@ const StartupVisa = () => {
                     What are the benefits?
                   </button>
                   <a
-                    href="https://calendly.com/someshlingwal1"
+                    href="https://calendly.com/nikita-visarapid/30min?back=1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border px-8 py-3 rounded-lg font-medium transition-colors inline-block text-center"

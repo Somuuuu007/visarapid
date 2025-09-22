@@ -41,7 +41,7 @@ process simple and achievable.
             <div ref={buttonsRef} className={`fade-in-up animation-delay-400 ${buttonsVisible ? 'visible' : ''}`}>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
                 <button 
-                  onClick={() => window.open('https://calendly.com/someshlingwal1', '_blank', 'noopener,noreferrer')}
+                  onClick={() => window.open('https://calendly.com/nikita-visarapid/30min?back=1', '_blank', 'noopener,noreferrer')}
                   className="btn-primary text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 font-medium text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap cursor-pointer" 
                   style={{borderRadius: '8px', backgroundColor: 'rgb(111, 54, 2)'}}
                 >
