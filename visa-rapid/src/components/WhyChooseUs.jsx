@@ -11,14 +11,6 @@ const WhyChooseUs = () => {
     fullName: '',
     email: '',
     phone: '',
-    country: '',
-    currentLocation: '',
-    profession: '',
-    experience: '',
-    education: '',
-    preferredDestination: '',
-    budget: '',
-    timeframe: '',
     message: ''
   })
   const [errors, setErrors] = useState({})
@@ -36,14 +28,6 @@ const WhyChooseUs = () => {
       fullName: '',
       email: '',
       phone: '',
-      country: '',
-      currentLocation: '',
-      profession: '',
-      experience: '',
-      education: '',
-      preferredDestination: '',
-      budget: '',
-      timeframe: '',
       message: ''
     })
   }
@@ -88,11 +72,8 @@ const WhyChooseUs = () => {
     if (!formData.email.trim()) {
       newErrors.email = 'Email address is required'
     }
-    if (!formData.country.trim()) {
-      newErrors.country = 'Country is required'
-    }
-    if (!formData.profession.trim()) {
-      newErrors.profession = 'Profession is required'
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required'
     }
 
     setErrors(newErrors)
@@ -203,7 +184,7 @@ const WhyChooseUs = () => {
             onClick={closeModal}
           >
             <div
-              className="bg-white rounded-lg max-w-5xl w-full max-h-[92vh] overflow-y-auto mx-4 sm:mx-0"
+              className="bg-white rounded-lg max-w-2xl w-full max-h-[92vh] overflow-y-auto mx-4 sm:mx-0"
               onClick={(e) => e.stopPropagation()}
             >
 
@@ -237,10 +218,8 @@ const WhyChooseUs = () => {
               {/* Form */}
               <div className="p-4 sm:p-5">
                 <form className="space-y-4" onSubmit={handleSubmit}>
-                  {/* Personal Information Section */}
-                  <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 border-b border-gray-200 pb-1">Personal Information</h3>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Full Name <span style={{color: '#ef4444'}}>*</span></label>
                         <input
@@ -265,149 +244,29 @@ const WhyChooseUs = () => {
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                       </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className={`w-full p-3 border rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white focus:border-transparent ${
-                            errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
-                          }`}
-                        />
-                        {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Country <span style={{color: '#ef4444'}}>*</span></label>
-                        <input
-                          type="text"
-                          value={formData.country}
-                          onChange={(e) => handleInputChange('country', e.target.value)}
-                          className={`w-full p-3 border rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white focus:border-transparent ${
-                            errors.country ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
-                          }`}
-                        />
-                        {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
-                      </div>
                     </div>
-                  </div>
-
-                  {/* Professional Information Section */}
-                  <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 border-b border-gray-200 pb-1">Professional Background</h3>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Current Location</label>
-                        <input
-                          type="text"
-                          value={formData.currentLocation}
-                          onChange={(e) => handleInputChange('currentLocation', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Profession <span style={{color: '#ef4444'}}>*</span></label>
-                        <input
-                          type="text"
-                          value={formData.profession}
-                          onChange={(e) => handleInputChange('profession', e.target.value)}
-                          className={`w-full p-3 border rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white focus:border-transparent ${
-                            errors.profession ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
-                          }`}
-                        />
-                        {errors.profession && <p className="text-red-500 text-xs mt-1">{errors.profession}</p>}
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Years of Experience</label>
-                        <select
-                          value={formData.experience}
-                          onChange={(e) => handleInputChange('experience', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        >
-                          <option value="">Select experience</option>
-                          <option value="0-2">0-2 years</option>
-                          <option value="3-5">3-5 years</option>
-                          <option value="6-10">6-10 years</option>
-                          <option value="10+">10+ years</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Education Level</label>
-                        <select
-                          value={formData.education}
-                          onChange={(e) => handleInputChange('education', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        >
-                          <option value="">Select education</option>
-                          <option value="highschool">High School</option>
-                          <option value="bachelor">Bachelor's Degree</option>
-                          <option value="master">Master's Degree</option>
-                          <option value="phd">PhD</option>
-                        </select>
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number <span style={{color: '#ef4444'}}>*</span></label>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className={`w-full p-3 border rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white focus:border-transparent ${
+                          errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-teal-500'
+                        }`}
+                      />
+                      {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                     </div>
-                  </div>
-
-                  {/* Immigration Preferences Section */}
-                  <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 border-b border-gray-200 pb-1">Immigration Preferences</h3>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Destination</label>
-                        <select
-                          value={formData.preferredDestination}
-                          onChange={(e) => handleInputChange('preferredDestination', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        >
-                          <option value="">Select destination</option>
-                          <option value="germany">Germany</option>
-                          <option value="netherlands">Netherlands</option>
-                          <option value="portugal">Portugal</option>
-                          <option value="spain">Spain</option>
-                          <option value="other">Other European Country</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
-                        <select
-                          value={formData.budget}
-                          onChange={(e) => handleInputChange('budget', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        >
-                          <option value="">Select budget</option>
-                          <option value="under-50k">Under $50,000</option>
-                          <option value="50k-100k">$50,000 - $100,000</option>
-                          <option value="100k-200k">$100,000 - $200,000</option>
-                          <option value="above-200k">Above $200,000</option>
-                        </select>
-                      </div>
-                      <div className="lg:col-span-2">
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Timeframe</label>
-                        <select
-                          value={formData.timeframe}
-                          onChange={(e) => handleInputChange('timeframe', e.target.value)}
-                          className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent"
-                        >
-                          <option value="">When do you plan to relocate?</option>
-                          <option value="asap">ASAP (0-6 months)</option>
-                          <option value="6-12months">6-12 months</option>
-                          <option value="1-2years">1-2 years</option>
-                          <option value="2+years">2+ years</option>
-                        </select>
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                      <textarea
+                        rows="4"
+                        value={formData.message}
+                        onChange={(e) => handleInputChange('message', e.target.value)}
+                        placeholder="Tell us about your specific needs or any questions you have..."
+                        className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent resize-none"
+                      ></textarea>
                     </div>
-                  </div>
-
-                  {/* Additional Information */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Additional Information</label>
-                    <textarea
-                      rows="3"
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      placeholder="Tell us about your specific needs, family situation, or any questions you have..."
-                      className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white focus:border-transparent resize-none"
-                    ></textarea>
                   </div>
 
                   {/* Submit Button */}

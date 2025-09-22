@@ -58,7 +58,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/visa.rapid/"
                 className="w-10 h-10 rounded transition-colors flex items-center justify-center"
                 style={{
                   backgroundColor: '#374151',

@@ -55,7 +55,7 @@ process simple and achievable.
           <div className="relative mt-8 lg:mt-0 order-first lg:order-last hidden lg:block h-96 lg:h-[500px] xl:h-[600px]">
             <div className="relative flex justify-center items-center h-full w-full">
               {/* First image - positioned on the left and slightly up */}
-                <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-right animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
+                <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-left animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
                   <img 
                     src="/Combined.webp" 
                     alt="Family immigration consultation"

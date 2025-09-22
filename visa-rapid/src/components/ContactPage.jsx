@@ -30,8 +30,7 @@ const styles = `
               Set up a one-on-one meeting
             </h2>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Lawyers in citizenship by investment will analyze your case and help you find an individual solution.
-            </p>
+            Expert one-on-one guidance on Portugal  visas, reinforced by our legal team.            </p>
 
             {/* Book Appointment Button */}
             <a
