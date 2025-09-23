@@ -478,8 +478,19 @@ const EntrepreneurVisa = () => {
             <div className="relative z-10 p-8 lg:p-16">
               <div className="max-w-4xl mx-auto">
                   {/* Calendly Widget */}
-                  <div style={{ height: "600px", borderRadius: "16px", overflow: "hidden" }}>
-                    <InlineWidget url="https://calendly.com/nikita-visarapid/30min" />
+                  <div style={{
+                    height: "640px",
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    border: "1px solid #e5e7eb"
+                  }}>
+                    <InlineWidget
+                      url="https://calendly.com/nikita-visarapid/30min"
+                      styles={{
+                        height: '100%',
+                        borderRadius: '16px'
+                      }}
+                    />
                   </div>
               </div>
             </div>
