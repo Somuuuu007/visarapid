@@ -5,25 +5,20 @@ const FloatingButtons = () => {
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
-    let lastScrollY = 0
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      const scrollThreshold = 100 // Show buttons after scrolling 100px
+      const scrollThreshold = 100 // Hide buttons only when at top (navbar visible)
 
-      // Show buttons when navbar would be hidden (scrolling down and past threshold)
-      if (currentScrollY > scrollThreshold && currentScrollY > lastScrollY) {
+      // Show buttons when scrolled past threshold (navbar hidden)
+      // Hide buttons only when at the very top (navbar fully visible)
+      if (currentScrollY > scrollThreshold) {
         setIsVisible(true)
-      }
-      // Hide buttons when navbar would be visible (scrolling up or at top)
-      else if (currentScrollY <= scrollThreshold || currentScrollY < lastScrollY) {
+      } else {
         setIsVisible(false)
       }
 
       // Show scroll to top button when user has scrolled down significantly
       setShowScrollTop(currentScrollY > 300)
-
-      lastScrollY = currentScrollY
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
