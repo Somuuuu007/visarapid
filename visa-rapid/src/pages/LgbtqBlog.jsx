@@ -22,19 +22,19 @@ const LuxembourgBlog = () => {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-            Luxembourg to scrap Golden Visa as Portugal stands strong
+          LGBTQ+ Americans choose Portugal's Golden Visa.
           </h1>
           <div className="flex items-center text-gray-500 text-sm">
-            <span>Published on September 18, 2025</span>
+            <span>Published on September 12, 2025</span>
             <span className="mx-2">•</span>
-            <span>5 min read</span>
+            <span>6 min read</span>
           </div>
         </header>
 
         {/* Featured Image */}
         <div className="mb-8">
           <img
-            src="/Blog.webp"
+            src="/Blog3.webp"
             alt="Luxembourg Golden Visa termination"
             className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -44,60 +44,53 @@ const LuxembourgBlog = () => {
         <article className="prose prose-lg max-w-none">
           <div className="text-gray-700 leading-relaxed space-y-6">
             <p className="text-xl text-gray-600 mb-8 font-medium">
-            Luxembourg is set to terminate its Golden Visa programme following seven years of limited success and uptake.
+            For a growing number of the LGBTQ+ community in the United States, Portugal’s progressive and welcoming social climate has proved a major draw amid political and social upheaval in their homeland.
             </p>
 
-            <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-            European investment migration landscape consolidates
-            </h2>
-
-            <p>
-            The proposed Luxembourg termination follows similar decisions across Europe. Most recently, Spain discontinued its Golden Visa programme, with the closure taking effect in April 2025. <br />
-
-Luxembourg's programme structure requires separate administrative tracks through the economy and finance ministries, creating operational complexities that have proven challenging given the limited uptake.    </p>
-
-
-
-            <h2 className="text-4xl font-semibold text-gray-900 mt-8 mb-4">
-            Market positioning and investment considerations
-            </h2>
-
-            <p>
-            The consolidation of European investment migration options positions Portugal among a select group of EU jurisdictions maintaining active programmes. 
+            <p className='mt-10'>
+            Portugal is consistently ranked as one of the most LGBT+-friendly nations in the world. Its constitution explicitly bans discrimination based on sexual orientation, a legal protection that is foundational and comprehensive.
             <br />
             <br />
 
-Portugal's programme provides pathways to permanent residency and Portuguese citizenship within five years. Eligible individuals can also benefit from the IFICI tax regime, which offers competitive fiscal advantages, such as flat 20% tax rates on Portugal-sourced income and a 0% tax on foreign-sourced income, such as capital gains and dividends.
-<br />
-<br />
-
-
-The Golden Visa programme's family reunification provisions enable spouses and dependent children to obtain residence permits, addressing comprehensive relocation requirements for high-net-worth individuals seeking European residency solutions. </p>
-
-
-            <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-              What This Means for Investors
-            </h2>
-
-            <p>
-              Luxembourg's decision to terminate its Golden Visa programme reflects the broader trend of European countries reassessing their investment migration offerings. However, this creates opportunities for well-established programmes like those in Portugal.
-            </p>
-
-            <p>
-              For international investors, this development underscores the importance of choosing established, stable investment migration programmes with proven track records and clear regulatory frameworks.
+According to Rainbow Map, which ranks European countries on their safety and suitability for the LGBTQ+ community, Portugal is more welcoming than the likes of the UK, France, the Netherlands, and Italy.
             </p>
 
             <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-              Looking Forward
+            Portugal is ranked as one of the most LGBTQ+ friendly countries in the world
             </h2>
 
             <p>
-              As the European investment migration landscape continues to evolve, Portugal's commitment to maintaining attractive and accessible investment visa programmes positions it as a leading destination for international investors seeking European residency.
+            Portugal was also named the seventh safest country in the world in the 2025 Global Peace Index. <br />
+            <br />
+            Paul Stannard, Chairman and Founder of Portugal Pathways and the Portugal Investment Owners Club, said: “We’ve worked with countless LGBTQ+ clients from across the world, including the US, and what we hear time and time again is just how safe and assured they feel in Portugal.
+            <br />
+            <br />
+
+            “The difference can be stark, especially for those coming from less progressive states or countries.
+            <br />
+            <br />
+            “It’s no surprise, either, Portugal has a strong history of advancing LGBTQ+ rights, having legalised same-sex marriage in 2010 and granting adoption rights to same-sex couples in 2016.
+            <br /><br />
+            “In addition, robust anti-discrimination laws protect against prejudice in employment, housing, and public services.”
+            <br /><br />
             </p>
 
+
+
+            <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+            Portugal's Golden Visa has seen record levels of interest in 2025
+            </h2>
+
             <p>
-              The termination of Luxembourg's programme serves as a reminder of the importance of due diligence when selecting an investment migration programme. Portugal's established infrastructure, experienced service providers, and stable regulatory environment continue to make it an attractive choice for discerning investors.
-            </p>
+            Beyond social security, the Portugal Golden Visa offers a highly practical and strategic framework for those looking for a European foothold. It's a residency-by-investment programme that provides a route to residency and, after five years, citizenship.<br />
+            <br />
+
+            The key benefit is the minimal residency requirement: just an average of seven days per year must be spent in Portugal. This allows investors to maintain their primary home and business interests in the US while gaining a crucial European option.<br />
+<br />
+
+
+The investment options are varied, but the most common are investments in Golden Visa-eligible Portuguese alternative investment funds, which have a minimum investment of €500,000. This shift towards fund investment follows recent changes to the programme. It removed the real estate purchase option at the end of 2023.
+</p>
           </div>
         </article>
 
@@ -155,20 +148,20 @@ The Golden Visa programme's family reunification provisions enable spouses and d
 
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
               <img
-                src="/Blog3.webp"
+                src="/Blog.webp"
                 alt="LGBTQ+ Golden Visa"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-blue-100 text-gray-600 text-sm rounded-full mb-3">
-                  Culture & Heritage
+                  Visa & Finance
                 </span>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  LGBTQ+ Americans choose Portugal's Golden Visa
+                Luxembourg to scrap Golden Visa as Portugal stands strong
                 </h4>
                 <a
-                href="/blogs/Lgbtq-golden-visa"
-                className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors mt-11"
+                href="/blogs/luxembourg-golden-visa"
+                className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors mt-4"
                 style={{color: 'gray'}}
               >
                 Read more

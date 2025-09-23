@@ -74,7 +74,7 @@ const Blogs = () => {
               Portugal now outranks UK and US in passport power
               </h3>
               <a
-                href="#"
+                href="/blogs/Portugal-passport-power"
                 className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors mt-4"
                 style={{color: 'gray'}}
               >
@@ -103,7 +103,7 @@ const Blogs = () => {
               LGBTQ+ Americans choose Portugal's Golden Visa
               </h3>
               <a
-                href="#"
+                href="/blogs/Lgbtq-golden-visa"
                 className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors mt-4"
                 style={{color: 'gray'}}
               >

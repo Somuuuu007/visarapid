@@ -22,19 +22,19 @@ const LuxembourgBlog = () => {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-            Luxembourg to scrap Golden Visa as Portugal stands strong
+          Portugal now outranks UK and US in passport power and appeal.
           </h1>
           <div className="flex items-center text-gray-500 text-sm">
-            <span>Published on September 18, 2025</span>
+            <span>Published on September 19, 2025</span>
             <span className="mx-2">•</span>
-            <span>5 min read</span>
+            <span>4 min read</span>
           </div>
         </header>
 
         {/* Featured Image */}
         <div className="mb-8">
           <img
-            src="/Blog.webp"
+            src="/Blog2.webp"
             alt="Luxembourg Golden Visa termination"
             className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -44,60 +44,44 @@ const LuxembourgBlog = () => {
         <article className="prose prose-lg max-w-none">
           <div className="text-gray-700 leading-relaxed space-y-6">
             <p className="text-xl text-gray-600 mb-8 font-medium">
-            Luxembourg is set to terminate its Golden Visa programme following seven years of limited success and uptake.
+            The Portuguese passport has surged in global demand, now ranked the fourth most powerful and appealing in the world, according to the newly released Global Passport Power and Appeal Index 2025.
             </p>
 
             <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-            European investment migration landscape consolidates
+            Global Passport Power and Appeal Index 2025
             </h2>
 
             <p>
-            The proposed Luxembourg termination follows similar decisions across Europe. Most recently, Spain discontinued its Golden Visa programme, with the closure taking effect in April 2025. <br />
-
-Luxembourg's programme structure requires separate administrative tracks through the economy and finance ministries, creating operational complexities that have proven challenging given the limited uptake.    </p>
+            The index, compiled by the World Digital Foundation and published in September 2025, evaluates passports across a wide set of criteria designed for HNWIs, investors, and globally mobile professionals.
+<br />
+<br />
+“Instead of only focusing on visa-free travel, this index was compiled and scored based on broader considerations that affect wealth strategy and lifestyle optimisation,” explains the World Digital Foundation’s Danielle Moxey.
+<br />
+<br />
+“This included global mobility, international banking and investment ease, tax exposure, healthcare and political stability, lifestyle appeal, and HNWI investment opportunities.”
+<br />
+<br />
+Portugal placed fourth overall, higher than any other EU nation.
+ </p>
 
 
 
             <h2 className="text-4xl font-semibold text-gray-900 mt-8 mb-4">
-            Market positioning and investment considerations
+            Why Portugal is climbing the ranks
             </h2>
 
             <p>
-            The consolidation of European investment migration options positions Portugal among a select group of EU jurisdictions maintaining active programmes. 
-            <br />
+            Portugal is increasingly viewed as one of Europe’s most appealing destinations for investors, wealthy families, and professionals seeking mobility.<br />
             <br />
 
-Portugal's programme provides pathways to permanent residency and Portuguese citizenship within five years. Eligible individuals can also benefit from the IFICI tax regime, which offers competitive fiscal advantages, such as flat 20% tax rates on Portugal-sourced income and a 0% tax on foreign-sourced income, such as capital gains and dividends.
-<br />
+            Its passport offers visa-free travel to more than 190 countries and the right to live, work, and invest anywhere in the European Union.<br />
 <br />
 
 
-The Golden Visa programme's family reunification provisions enable spouses and dependent children to obtain residence permits, addressing comprehensive relocation requirements for high-net-worth individuals seeking European residency solutions. </p>
+The country’s IFICI tax framework (known as NHR 2.0) further boosts its attraction, offering 0% tax on most foreign-sourced income (excluding pensions and income from blacklisted jurisdictions) and a flat 20% rate on Portuguese employment or self-employment income for ten years. Portugal also imposes no wealth or inheritance tax, providing additional scope for wealth planning.<br />
+<br />
+</p>
 
-
-            <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-              What This Means for Investors
-            </h2>
-
-            <p>
-              Luxembourg's decision to terminate its Golden Visa programme reflects the broader trend of European countries reassessing their investment migration offerings. However, this creates opportunities for well-established programmes like those in Portugal.
-            </p>
-
-            <p>
-              For international investors, this development underscores the importance of choosing established, stable investment migration programmes with proven track records and clear regulatory frameworks.
-            </p>
-
-            <h2 className="text-4xl font-semibold text-gray-900 mt-10 mb-4">
-              Looking Forward
-            </h2>
-
-            <p>
-              As the European investment migration landscape continues to evolve, Portugal's commitment to maintaining attractive and accessible investment visa programmes positions it as a leading destination for international investors seeking European residency.
-            </p>
-
-            <p>
-              The termination of Luxembourg's programme serves as a reminder of the importance of due diligence when selecting an investment migration programme. Portugal's established infrastructure, experienced service providers, and stable regulatory environment continue to make it an attractive choice for discerning investors.
-            </p>
           </div>
         </article>
 
@@ -129,7 +113,7 @@ The Golden Visa programme's family reunification provisions enable spouses and d
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
               <img
-                src="/Blog2.webp"
+                src="/Blog.webp"
                 alt="Portugal Passport Power"
                 className="w-full h-48 object-cover"
               />
@@ -138,10 +122,10 @@ The Golden Visa programme's family reunification provisions enable spouses and d
                   Visa & Finance
                 </span>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  Portugal now outranks UK and US in passport power
+                Luxembourg to scrap Golden Visa as Portugal stands strong
                 </h4>
                 <a
-                href="/blogs/Portugal-passport-power"
+                href="/blogs/luxembourg-golden-visa"
                 className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors mt-4"
                 style={{color: 'gray'}}
               >
