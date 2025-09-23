@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { InlineWidget } from "react-calendly"
 import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const EntrepreneurVisa = () => {
@@ -10,73 +11,6 @@ const EntrepreneurVisa = () => {
   const [processRef, processVisible] = useScrollAnimation({ threshold: 0.1 })
   const [contactRef, contactVisible] = useScrollAnimation({ threshold: 0.1 })
 
-  // Form state
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
-  const [errors, setErrors] = useState({})
-
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
-
-  const validatePhone = (phone) => {
-    const phoneRegex = /^[+]?[\d\s\-()]{10,}$/
-    return phoneRegex.test(phone)
-  }
-
-  const handleInputChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }))
-    }
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const newErrors = {}
-
-    // Validate email
-    if (formData.email && !validateEmail(formData.email)) {
-      newErrors.email = 'Please enter a valid email address'
-    }
-
-    // Validate phone
-    if (formData.phone && !validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number (at least 10 digits)'
-    }
-
-    // Validate required fields
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required'
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email address is required'
-    }
-
-    setErrors(newErrors)
-
-    // If no errors, submit the form
-    if (Object.keys(newErrors).length === 0) {
-      // Handle form submission here
-      console.log('Form submitted:', formData)
-      // Reset form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      })
-    }
-  }
 
   return (
     <>
@@ -543,84 +477,10 @@ const EntrepreneurVisa = () => {
             {/* Content Overlay */}
             <div className="relative z-10 p-8 lg:p-16">
               <div className="max-w-4xl mx-auto">
-                {/* Form Container */}
-                <div className={`bg-white rounded-2xl p-8 lg:p-12 shadow-2xl stagger-item ${contactVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-                  {/* Header */}
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-                      Schedule a free expert consultation for your D2 Visa application
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed">
-                      Please contact our team to arrange a initial no-obligation discovery call with our D2 Visa specialists to assess your eligibility and receive personalised guidance. To ensure we provide the most relevant advice, please provide some basic information about your background and goals.
-                    </p>
+                  {/* Calendly Widget */}
+                  <div style={{ height: "600px", borderRadius: "16px", overflow: "hidden" }}>
+                    <InlineWidget url="https://calendly.com/nikita-visarapid/30min" />
                   </div>
-
-                  {/* Form */}
-                  <form className="space-y-6" onSubmit={handleSubmit}>
-                    {/* Name and Email Row */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <input
-                          type="text"
-                          placeholder="Full Name"
-                          value={formData.fullName}
-                          onChange={(e) => handleInputChange('fullName', e.target.value)}
-                          className={`w-full p-4 border rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                            errors.fullName ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-red-400'
-                          }`}
-                        />
-                        {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
-                      </div>
-                      <div>
-                        <input
-                          type="email"
-                          placeholder="Email Address"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          className={`w-full p-4 border rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                            errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-red-400'
-                          }`}
-                        />
-                        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-                      </div>
-                    </div>
-
-                    {/* Phone */}
-                    <div>
-                      <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className={`w-full p-4 border rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                          errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-red-400'
-                        }`}
-                      />
-                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
-                    </div>
-
-                   
-
-                    {/* Message */}
-                    <textarea
-                      placeholder="Tell us about your business plans and immigration goals..."
-                      rows="4"
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      className="w-full p-4 border border-gray-300 rounded-lg bg-gray-50 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-400 focus:bg-white resize-none transition-all"
-                    ></textarea>
-
-
-
-                    {/* Submit Button */}
-                    <button
-                      type="submit"
-                      className="w-full text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 transform hover:scale-100 shadow-lg" style={{backgroundColor: '#ef4444'}} 
-                    >
-                      Schedule Free Consultation
-                    </button>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
