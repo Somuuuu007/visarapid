@@ -10,6 +10,7 @@ import ScheduleMeeting from './components/ScheduleMeeting'
 import Footer from './components/Footer'
 import ContactPage from './components/ContactPage'
 import StatsSection from './components/StatsSection'
+import FloatingButtons from './components/FloatingButtons'
 import EntrepreneurVisa from './pages/EntrepreneurVisa'
 import StartupVisa from './pages/StartupVisa'
 import JobSeekerVisa from './pages/JobSeekerVisa'
@@ -80,6 +81,7 @@ const App = () => {
             } />
           </Routes>
         </main>
+        <FloatingButtons />
       </div>
     </Router>
   )
