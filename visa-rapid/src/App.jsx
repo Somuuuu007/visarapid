@@ -16,6 +16,7 @@ import StartupVisa from './pages/StartupVisa'
 import JobSeekerVisa from './pages/JobSeekerVisa'
 import Residency from './pages/Residency'
 import Blogs from './pages/Blogs'
+import LuxembourgBlog from './pages/LuxembourgBlog'
 
 // Home page component
 const HomePage = () => (
@@ -76,6 +77,12 @@ const App = () => {
             <Route path="/blogs" element={
               <>
                 <Blogs />
+                <Footer />
+              </>
+            } />
+            <Route path="/blogs/luxembourg-golden-visa" element={
+              <>
+                <LuxembourgBlog />
                 <Footer />
               </>
             } />
