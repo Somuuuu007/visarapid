@@ -371,10 +371,10 @@ const StartupVisa = () => {
 
             {/* Content Overlay */}
             <div className="relative z-10 p-8 lg:p-16">
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-5xl mx-auto">
                   {/* Calendly Widget */}
                   <div style={{
-                    height: "640px",
+                    height: "680px",
                     borderRadius: "16px",
                     overflow: "hidden",
                     border: "1px solid #e5e7eb"
@@ -382,7 +382,8 @@ const StartupVisa = () => {
                     <InlineWidget
                       url="https://calendly.com/nikita-visarapid/30min"
                       styles={{
-                        height: '100%',
+                        height: '110%',
+                        width: '100%',
                         borderRadius: '16px'
                       }}
                     />

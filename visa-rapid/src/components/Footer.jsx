@@ -30,7 +30,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 mb-8">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/nikita-20062a93/"
                 className="w-10 h-10 rounded transition-colors flex items-center justify-center"
                 style={{
                   backgroundColor: '#374151',
@@ -72,17 +72,6 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-
-            {/* Back to Top Button */}
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded hover:bg-gray-700 transition-colors"
-            >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-              </svg>
-              BACK TO TOP
-            </button>
           </div>
 
           {/* Middle Section - Site Map */}
