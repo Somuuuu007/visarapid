@@ -57,7 +57,7 @@ process simple and achievable.
               {/* First image - positioned on the left and slightly up */}
                 <div ref={image1Ref} className={`absolute left-0 top-0 fade-in-left animation-delay-200 ${image1Visible ? 'visible' : ''}`}>
                   <img 
-                    src="/Combine2.png" 
+                    src="/comb.png" 
                     alt="Family immigration consultation"
                     className="w-80 h-60 lg:w-full lg:h-150 xl:w-full xl:h-150 object-cover"
                   />
