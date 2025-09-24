@@ -44,7 +44,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/people/visa-rapid/61581299580909/"
                 className="w-10 h-10 rounded transition-colors flex items-center justify-center"
                 style={{
                   backgroundColor: '#374151',
